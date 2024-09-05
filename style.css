@@ -2,7 +2,6 @@
 body {
     font-family: "Pixelify Sans", sans-serif;
     font-style: normal;
-    text-rendering: optimizeSpeed;
     font-smooth: never;
     -webkit-font-smoothing : none;
     -moz-osx-font-smoothing: none; /* Desativa a suavização de fontes no Firefox no macOS */
@@ -28,11 +27,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     color: aliceblue;
-    display: flex; /* O display flex permite deixar as coisas centralizadas */
     align-items: center;
     transition: transform ease 200ms;
-
-    
 }
 
 .card:hover {
