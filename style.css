@@ -12,12 +12,30 @@ body {
 }
 
 .card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background: linear-gradient(135deg, #ffffff1a, #ffffff1d);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: aliceblue;
+    transition: transform ease 200ms;
+}
+.card:hover {
+    transform: scale(1.07);
+    transition: transform ease 200ms;
+}
+
+
+.modal-content {  
+    --bs-modal-bg: #ffffff1d !important;
+    backdrop-filter: blur(10px);
+    color: #dddddd;
+}
+
+.card img {
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .card-img-top {
