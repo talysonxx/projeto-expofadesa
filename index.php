@@ -19,8 +19,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="imgs/dark.css">
+    <link rel="stylesheet" href="style.css">
     <title>Arcade Fadesa</title>
 </head>
 <body>
@@ -29,12 +29,13 @@
     ?>
     <div class="container">
         <!-- CABECALHO DO SITE -->
-        <div class="row">
-            <div class="col-6 bg-danger"><img src="imgs/jabu.png" alt="cu" style="
+         <div>
+        <div class="col-sm" style="font-size: 40px; color: aliceblue">
+         <img src="imgs/jabu.png" alt="cu" style="
             width: 50px;
             margin: 10px;
-            "></div>
-            <div class="col-6 bg-warning">Nome site</div>
+            margin-right: 30px">
+            YAMETE-EMILIA_TAN</div>
         </div>
 
         <div class="row mt-4 mb-4" style="font-size: 40px; color: aliceblue">JOGOS DISPONÍVEIS</div>
@@ -88,8 +89,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-primary">Ação</button>
+                            <md-filled-tonal-button type="button" data-bs-dismiss="modal">Fechar</md-filled-tonal-button>
+                            <md-filled-button type="button">Ação</md-filled-button>
                         </div>
                     </div>
                 </div>

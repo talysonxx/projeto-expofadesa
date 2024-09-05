@@ -2,7 +2,6 @@
 body {
     font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
     font-style: normal;
   }
 
@@ -20,8 +19,8 @@ body {
 }
 
 .card {
-    background: linear-gradient(135deg, #ffffff1a, #ffffff1d);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, #ffffff1a, #00000080);
+    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -38,15 +37,17 @@ body {
 
 
 .modal-dialog {  
-    --bs-modal-bg: #74747459 !important;
+    --bs-modal-bg: #2a2a2a6b !important;
     backdrop-filter: blur(10px);
     color: #dddddd;
 }
+
 
 .card img {
     padding: 10px;
     border-radius: 20px;
 }
+.col-6 {margin-top: 20px;} /* a altura bugava quando diminuia o tamanho da tela, isso melhora um pouco */
 
 .card-img-top {
     width: 100%;
