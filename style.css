@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 body {
     font-family: "Pixelify Sans", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
+    text-rendering: optimizeSpeed;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    -moz-osx-font-smoothing: none; /* Desativa a suavização de fontes no Firefox no macOS */
   }
 
 body {
@@ -21,7 +24,6 @@ body {
 .card {
     background: linear-gradient(135deg, #ffffff1a, #00000080);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -29,12 +31,14 @@ body {
     display: flex; /* O display flex permite deixar as coisas centralizadas */
     align-items: center;
     transition: transform ease 200ms;
-}
-.card:hover {
-    transform: scale(1.07);
-    transition: transform ease 200ms;
+
+    
 }
 
+.card:hover {
+    transform: perspective(1px) scale(1.08);
+    transition: transform ease 200ms;
+}
 
 .modal-dialog {  
     --bs-modal-bg: #2a2a2a6b !important;
