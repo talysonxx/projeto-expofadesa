@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+body {
+    font-family: "Pixelify Sans", sans-serif;
+    font-style: normal;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    -moz-osx-font-smoothing: none; /* Desativa a suavização de fontes no Firefox no macOS */
+  }
+
 body {
     margin: 0;
     padding: 0;
@@ -12,31 +21,33 @@ body {
 }
 
 .card {
-    background: linear-gradient(135deg, #ffffff1a, #ffffff1d);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, #ffffff1a, #00000080);
+    backdrop-filter: blur(20px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     color: aliceblue;
+    align-items: center;
     transition: transform ease 200ms;
 }
+
 .card:hover {
-    transform: scale(1.07);
+    transform: perspective(1px) scale(1.08);
     transition: transform ease 200ms;
 }
 
-
-.modal-content {  
-    --bs-modal-bg: #ffffff1d !important;
+.modal-dialog {  
+    --bs-modal-bg: #2a2a2a6b !important;
     backdrop-filter: blur(10px);
     color: #dddddd;
 }
+
 
 .card img {
     padding: 10px;
     border-radius: 20px;
 }
+.col-6 {margin-top: 20px;} /* a altura bugava quando diminuia o tamanho da tela, isso melhora um pouco */
 
 .card-img-top {
     width: 100%;
