@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('imgs/back-ground.gif');
+    /* Caminho para o seu GIF */
+    background-size: cover;
+    /* Faz a imagem cobrir toda a tela */
+    background-repeat: repeat;
+    /* Impede a repetição da imagem */
+    background-attachment: fixed;
+    /* Faz com que o fundo permaneça fixo durante o rolar da página */
+}
+
+.card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.card-img-top {
+    width: 100%;
+    /* Faz com que a imagem ocupe toda a largura do card */
+    height: 250px;
+    /* Define uma altura fixa para a imagem */
+    object-fit: cover;
+    /* Garante que a imagem preencha a área sem distorção */
+}
+
+.card-text {
+    text-align: justify;
+}
