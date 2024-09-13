@@ -1,16 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+html {overflow-x: hidden;}
 body {
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: BestTen, sans-serif;
     font-style: normal;
     font-smooth: never;
+    color: aliceblue;
     -webkit-font-smoothing : none;
     -moz-osx-font-smoothing: none; /* Desativa a suavização de fontes no Firefox no macOS */
   }
 
+@font-face {
+    font-family: BestTen;
+    src: url("fonts/BestTen-DOT.otf");
+}
+
+
+.bold-stroke { /* pego de https://stackoverflow.com/questions/2570972/css-font-border   ... */
+    text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #000,
+         0px -1px 0px #000,
+         1px -1px 0px #000,
+        -1px  0px 0px #000,
+         1px  0px 0px #000,
+        -1px  1px 0px #000,
+         0px  1px 0px #000,
+         1px  1px 0px #000,
+        /* second layer at 2px */
+        -2px -2px 0px #000,
+        -1px -2px 0px #000,
+         0px -2px 0px #000,
+         1px -2px 0px #000,
+         2px -2px 0px #000,
+         2px -1px 0px #000,
+         2px  0px 0px #000,
+         2px  1px 0px #000,
+         2px  2px 0px #000,
+         1px  2px 0px #000,
+         0px  2px 0px #000,
+        -1px  2px 0px #000,
+        -2px  2px 0px #000,
+        -2px  1px 0px #000,
+        -2px  0px 0px #000,
+        -2px -1px 0px #000;
+}
+
 body {
+
+    --angle: 0deg;
     margin: 0;
     padding: 0;
-    background-image: url('imgs/back-ground.gif');
+    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/946215727611918441/36E212390D843220B5CC08DBF4FA373EA4F5BFBC/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true');
     /* Caminho para o seu GIF */
     background-size: cover;
     /* Faz a imagem cobrir toda a tela */
@@ -18,11 +59,14 @@ body {
     /* Impede a repetição da imagem */
     background-attachment: fixed;
     /* Faz com que o fundo permaneça fixo durante o rolar da página */
+    animation: girarBackground infinite linear 4s;
+    -moz-animation: girarBackground infinite linear 4s;
+    /* define uma animação que mudará a posição do para que ele fique girando de forma infinita e linear (os segundos define a velocidade) */
 }
 
 .card {
-    background: linear-gradient(135deg, #ffffff1a, #00000080);
-    backdrop-filter: blur(20px);
+    background: linear-gradient(153deg, #003937, #36052994);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -32,7 +76,7 @@ body {
 }
 
 .card:hover {
-    transform: perspective(1px) scale(1.08);
+    transform: perspective(1px) scale(1.08) translateY(1.01px);
     transition: transform ease 200ms;
 }
 
@@ -42,13 +86,21 @@ body {
     color: #dddddd;
 }
 
+.modal-content {
+    background: linear-gradient(153deg, #003937, #36052994);
+}
+
 
 .card img {
     padding: 10px;
     border-radius: 20px;
 }
-.col-6 {margin-top: 20px;} /* a altura bugava quando diminuia o tamanho da tela, isso melhora um pouco */
-
+ 
+.col-6 {
+    margin-top: 20px; /* a altura bugava quando diminuia o tamanho da tela, isso melhora um pouco */
+    margin-inline: -12px; /*diminui o tamanho dos cards */
+    padding-inline: 3%;
+}
 .card-img-top {
     width: 100%;
     /* Faz com que a imagem ocupe toda a largura do card */
@@ -58,6 +110,47 @@ body {
     /* Garante que a imagem preencha a área sem distorção */
 }
 
+.card-body {
+    display: flex;
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .card-text {
     text-align: justify;
 }
+
+.row {
+    padding-bottom: 55px;
+    justify-content: space-between;
+    --bs-gutter-x: 0.5rem;
+}
+
+@keyframes girarBackground {
+    from {
+        --angle: 0deg;
+        background-position: calc(50% + 10px * cos(var(--angle))) calc(50% + 10px * sin(var(--angle)));
+        /* 50% é a posição inicial, soma-se com 20px (que é a força do movimento) e multiplica pelo cos ou sen do angulo, que vai de 0 a 360  */
+    }
+    to {
+        --angle: 360deg;
+      background-position: calc(50% + 10px * cos(var(--angle))) calc(50% + 10px * sin(var(--angle)));
+    }
+  }
+@property --angle { /* retirado de https://codepen.io/bramus/pen/rNWByYz */
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+
+  /* estilos para o cabeçalho do site */
+
+  .cabeçalho {
+    width: 100%;
+  }
+
