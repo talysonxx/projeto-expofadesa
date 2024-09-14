@@ -65,24 +65,32 @@
             </tbody>
         </table> -->
 
-        <table class="cabeçalho">
-            <td><img src="imgs/jabu.png" alt="cu" style="
-            width: 7em;
-            margin: 10px;
-            "></td>
+        <!-- <table class="cabeçalho">
+            <td><img src="imgs/jabu.png" alt="logo" style="width: 7em; margin: 10px;"></td>
             <td style="">
-                <h1 style="float: right;
-    margin-block: auto; color: aliceblue; font-size: 231%">blackDrop Out</h1>
+                <h1 style="float: right; margin-block: auto; color: aliceblue; font-size: 60,px">Arcade Fadesa</h1>
             </td>
-        </table>
+        </table> -->
 
-        <div class="row mt-4 mb-4">
-            <p style="margin: 0; padding: 0" class="bold-stroke">JOGOS DISPONÍVEIS</p>
+
+        <div class="row mt-2">
+            <div class="col-12 col-md-6 text-center">
+                <img src="imgs/jabu.png" style="width: 110px" alt="logo">
+            </div>
+            <div class="col-12 col-md-6 text-center  ">
+                <span style="font-size: 45px">Arcade Fudesa</span>
+            </div>
+        </div>
+
+        <div class="row text-center fs-6 mt-4 mb-1">
+            <div class="col">
+                <p class="bold-stroke">JOGOS DISPONÍVEIS</p>
+            </div>
         </div>
 
 
         <!-- AQUI VAI O CATÁLOGO DE JOGOS -->
-        <div class="row">
+        <div class="row" id="linhaCards">
             <?php
             $jogos = jogos();
             foreach ($jogos as $jogo) {
@@ -154,19 +162,16 @@
         ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <footer style="padding-inline: 30px;
-    padding-block: 10px;
-    display: flex;
-    /* align-content: center; */
-    flex-direction: column;
-    align-items: center; background: #001424; color: #d9ffffbf;
-    font-family: fangsong;">
-       <hr style="position: relative;top: -10px;margin: 0;height: 1px;background-image: linear-gradient(to right, #00000000, #d9ffff, #00000000);width: 100%;height: 6px;border: 0;
-">
-        <p>Talyson André</p>
-        <p>Todos os Direitos Reservados</p>
-        <p>© 2024</p>
-    </footer>
+    <div class="row">
+        <div class="col">
+            <footer>
+               <hr style="position: relative;top: -10px;margin: 0;height: 1px;background-image: linear-gradient(to right, #00000000, #d9ffff, #00000000);width: 100%;height: 6px;border: 0;">
+                <span><a class="links" href="#"target="blank" title="Documentação do projeto">Documentação</a></span>
+                <span><a class="links" href="https://github.com/talysonxx/projeto-expofadesa" target="blank" title="Acessa os arquivos do projeto">GitHub</a></span>
+                <span class="links">© 2024 - Expofadesa</span>
+            </footer>
+        </div>
+    </div>
 </body>
 <!-- <table class="cabeçalho"><td><p>SiTE POR</p></td><td style="float: right"><p>BOLSANRO</p></td></table> -->
 

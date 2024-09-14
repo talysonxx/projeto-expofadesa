@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.google   apis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
-html {overflow-x: hidden;}
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: BestTen, sans-serif;
     font-style: normal;
     font-smooth: never;
     color: aliceblue;
-    -webkit-font-smoothing : none;
-    -moz-osx-font-smoothing: none; /* Desativa a suavização de fontes no Firefox no macOS */
-  }
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: none;
+    /* Desativa a suavização de fontes no Firefox no macOS */
+}
 
 @font-face {
     font-family: BestTen;
@@ -16,33 +20,34 @@ body {
 }
 
 
-.bold-stroke { /* pego de https://stackoverflow.com/questions/2570972/css-font-border   ... */
-    text-shadow: 
+.bold-stroke {
+    /* pego de https://stackoverflow.com/questions/2570972/css-font-border   ... */
+    text-shadow:
         /* first layer at 1px */
         -1px -1px 0px #000,
-         0px -1px 0px #000,
-         1px -1px 0px #000,
-        -1px  0px 0px #000,
-         1px  0px 0px #000,
-        -1px  1px 0px #000,
-         0px  1px 0px #000,
-         1px  1px 0px #000,
+        0px -1px 0px #000,
+        1px -1px 0px #000,
+        -1px 0px 0px #000,
+        1px 0px 0px #000,
+        -1px 1px 0px #000,
+        0px 1px 0px #000,
+        1px 1px 0px #000,
         /* second layer at 2px */
         -2px -2px 0px #000,
         -1px -2px 0px #000,
-         0px -2px 0px #000,
-         1px -2px 0px #000,
-         2px -2px 0px #000,
-         2px -1px 0px #000,
-         2px  0px 0px #000,
-         2px  1px 0px #000,
-         2px  2px 0px #000,
-         1px  2px 0px #000,
-         0px  2px 0px #000,
-        -1px  2px 0px #000,
-        -2px  2px 0px #000,
-        -2px  1px 0px #000,
-        -2px  0px 0px #000,
+        0px -2px 0px #000,
+        1px -2px 0px #000,
+        2px -2px 0px #000,
+        2px -1px 0px #000,
+        2px 0px 0px #000,
+        2px 1px 0px #000,
+        2px 2px 0px #000,
+        1px 2px 0px #000,
+        0px 2px 0px #000,
+        -1px 2px 0px #000,
+        -2px 2px 0px #000,
+        -2px 1px 0px #000,
+        -2px 0px 0px #000,
         -2px -1px 0px #000;
 }
 
@@ -80,7 +85,7 @@ body {
     transition: transform ease 200ms;
 }
 
-.modal-dialog {  
+.modal-dialog {
     --bs-modal-bg: #2a2a2a6b !important;
     backdrop-filter: blur(10px);
     color: #dddddd;
@@ -95,12 +100,15 @@ body {
     padding: 10px;
     border-radius: 20px;
 }
- 
+
 .col-6 {
-    margin-top: 20px; /* a altura bugava quando diminuia o tamanho da tela, isso melhora um pouco */
-    margin-inline: -12px; /*diminui o tamanho dos cards */
+    margin-top: 20px;
+    /* a altura bugava quando diminuia o tamanho da tela, isso melhora um pouco */
+    margin-inline: -12px;
+    /*diminui o tamanho dos cards */
     padding-inline: 3%;
 }
+
 .card-img-top {
     width: 100%;
     /* Faz com que a imagem ocupe toda a largura do card */
@@ -124,11 +132,15 @@ body {
     text-align: justify;
 }
 
-.row {
+#linhaCards {
+
     padding-bottom: 55px;
     justify-content: space-between;
     --bs-gutter-x: 0.5rem;
 }
+
+/*.row {
+} */
 
 @keyframes girarBackground {
     from {
@@ -136,21 +148,47 @@ body {
         background-position: calc(50% + 10px * cos(var(--angle))) calc(50% + 10px * sin(var(--angle)));
         /* 50% é a posição inicial, soma-se com 20px (que é a força do movimento) e multiplica pelo cos ou sen do angulo, que vai de 0 a 360  */
     }
+
     to {
         --angle: 360deg;
-      background-position: calc(50% + 10px * cos(var(--angle))) calc(50% + 10px * sin(var(--angle)));
+        background-position: calc(50% + 10px * cos(var(--angle))) calc(50% + 10px * sin(var(--angle)));
     }
-  }
-@property --angle { /* retirado de https://codepen.io/bramus/pen/rNWByYz */
+}
+
+@property --angle {
+    /* retirado de https://codepen.io/bramus/pen/rNWByYz */
     syntax: '<angle>';
     initial-value: 0deg;
     inherits: false;
-  }
-  
+}
 
-  /* estilos para o cabeçalho do site */
 
-  .cabeçalho {
+/* estilos para o cabeçalho do site */
+
+.cabeçalho {
     width: 100%;
-  }
+}
 
+footer {
+    padding-inline: 30px;
+    padding-block: 10px;
+    display: flex;
+    /* align-content: center; */
+    flex-direction: column;
+    align-items: center;
+    background: #001424;
+    color: #d9ffffbf;
+    font-family: fangsong;
+}
+
+span .links {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+span .links:hover {
+    /* transition: ; */
+    /* text-decoration: underline; */
+    color: rgb(211, 197, 197)
+}
