@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcade Fadesa</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="dark.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/dark.css">
+    <link rel="stylesheet" href="styles/style.css">
 
-    <!-- importando botão estilo Google -->
     <script type="importmap">
         {
         "imports": {
@@ -45,7 +44,7 @@
         </div>
 
         <?php
-        require_once "catalogo.php";
+        require_once "./games/catalogo.php";
         ?>
         
         <!-- AQUI VAI O CATÁLOGO DE JOGOS -->
@@ -109,19 +108,15 @@
         }
         ?>
     </div>
-    
-    <div class="row">
-        <div class="col">
-            <footer>
-                <hr style="position: relative;top: -10px;margin: 0;height: 1px;background-image: linear-gradient(to right, #00000000, #d9ffff, #00000000);width: 100%;height: 6px;border: 0;">
-                <span><a class="links" href="#" target="blank" title="Documentação do projeto">Documentação</a></span>
-                <span><a class="links" href="https://github.com/talysonxx/projeto-expofadesa" target="blank" title="Acessa os arquivos do projeto">GitHub</a></span>
-                <span class="links">© 2024 - Expofadesa</span>
-            </footer>
-        </div>
-    </div>
 
-    <!-- import padrão Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <footer>
+        <hr style="position: relative;top: -10px;margin: 0;height: 1px;background-image: linear-gradient(to right, #00000000, #d9ffff, #00000000);width: 100%;height: 6px;border: 0;"/>
+
+        <span><a class="links" href="#" target="blank" title="Documentação do projeto">Documentação</a></span>
+        <span><a class="links" href="https://github.com/talysonxx/projeto-expofadesa" target="blank" title="Acessa os arquivos do projeto">GitHub</a></span>
+        <span class="links">© 2024 - Expofadesa</span>
+    </footer>
+        
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>

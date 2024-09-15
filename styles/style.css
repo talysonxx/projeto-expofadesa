@@ -1,6 +1,6 @@
 @font-face {
     font-family: BestTen;
-    src: url("fonts/BestTen-DOT.otf");
+    src: url("../fonts/BestTen-DOT.otf");
 }
 
 html {
@@ -153,18 +153,12 @@ body {
     inherits: false;
 }
 
-
-/* estilos para o cabeçalho do site */
-
-.cabeçalho {
-    width: 100%;
-}
-
 footer {
+    width: 100%;
     padding-inline: 30px;
     padding-block: 10px;
     display: flex;
-    /* align-content: center; */
+    align-content: center;
     flex-direction: column;
     align-items: center;
     background: #001424;
