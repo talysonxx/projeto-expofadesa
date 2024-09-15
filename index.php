@@ -99,7 +99,7 @@
                         </div>
                         <div class="modal-footer">
                             <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal">Fechar</md-filled-tonal-button>
-                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button">Jogar</md-filled-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button"><a href="<?php echo $jogo['localJogo'] ?>" target="blank">Jogar</a></md-filled-button>
                         </div>
                     </div>
                 </div>
