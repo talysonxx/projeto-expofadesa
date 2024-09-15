@@ -82,9 +82,9 @@
             </div>
         </div>
 
-        <div class="row text-center fs-6 mt-4 mb-1">
+        <div class="row text-center fs-6 mt-2 mb-1">
             <div class="col">
-                <p class="bold-stroke">JOGOS DISPONÍVEIS</p>
+                <span class="bold-stroke">JOGOS DISPONÍVEIS</span>
             </div>
         </div>
 
