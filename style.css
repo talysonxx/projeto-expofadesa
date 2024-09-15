@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@font-face {
+    font-family: BestTen;
+    src: url("fonts/BestTen-DOT.otf");
+}
 
 html {
     overflow-x: hidden;
@@ -13,12 +16,6 @@ body {
     -moz-osx-font-smoothing: none;
     /* Desativa a suavização de fontes no Firefox no macOS */
 }
-
-@font-face {
-    font-family: BestTen;
-    src: url("fonts/BestTen-DOT.otf");
-}
-
 
 .bold-stroke {
     /* pego de https://stackoverflow.com/questions/2570972/css-font-border   ... */
@@ -52,7 +49,6 @@ body {
 }
 
 body {
-
     --angle: 0deg;
     margin: 0;
     padding: 0;
@@ -95,7 +91,6 @@ body {
     background: linear-gradient(153deg, #003937, #36052994);
 }
 
-
 .card img {
     padding: 10px;
     border-radius: 20px;
@@ -133,14 +128,10 @@ body {
 }
 
 #linhaCards {
-
     padding-bottom: 55px;
     justify-content: space-between;
     --bs-gutter-x: 0.5rem;
 }
-
-/*.row {
-} */
 
 @keyframes girarBackground {
     from {
@@ -184,31 +175,8 @@ footer {
 span .links {
     text-decoration: none;
     color: white;
-    transition: color 0.3s ease;
 }
 
 span .links:hover {
-    /* transition: ; */
-    /* text-decoration: underline; */
     color: rgb(211, 197, 197)
-}
-
-
-#teste-botao {
-    background-color: transparent;
-    border: none;
-    /* remove a borda */
-    box-shadow: none;
-    /* remove sombra */
-    color: inherit;
-    /* mantém a cor do texto */
-    padding: 10px 20px;
-    /* opcional: mantém o preenchimento */
-    cursor: pointer;
-    /* muda o cursor para indicar que é um botão clicável */
-} 
-
-#teste-botao:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    /* opcional: adiciona um leve destaque no hover */
 }

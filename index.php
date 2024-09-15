@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcade Fadesa</title>
 
-    <!-- importando fonte customizada, style do Bootstrap, dos botões estilo Google e do projeto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="dark.css">
     <link rel="stylesheet" href="style.css">
@@ -28,7 +26,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="row mt-2 text-center">
+        <div class="row mt-2 text-center align-items-center">
             <div class="col-12 col-md-6">
                 <img src="imgs/jabu.png" style="width: 110px" alt="logo">
             </div>
@@ -37,9 +35,9 @@
             </div>
         </div>
 
-        <div class="row align-items-center text-center mt-4 mt-md-2">
+        <div class="row text-center align-items-center mt-4 mt-md-2">
             <div class="col-12 col-md-6">
-                <button id="teste-botao" type="button" class="btn btn-light">Login conta Google</button>
+                <button type="button" class="btn btn-light">Login conta Google</button>
             </div>
             <div class="col-12 col-md-6 mt-md-0 mt-2">
                 <span class="bold-stroke fs-6">JOGOS DISPONÍVEIS</span>
@@ -62,7 +60,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-center"><?php print($jogo['nomeJogo']); ?></h5>
                             <p class="card-text"><?php print($jogo['descricaoCurta']); ?></p>
-                            <md-outlined-button type="button" data-bs-toggle="modal"
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal"
                                 data-bs-target="#modal<?php echo str_replace(' ', '', $jogo['nomeJogo']); ?>">
                                 Sobre o jogo
                                 <svg slot="icon" viewBox="0 0 48 48">
@@ -101,8 +99,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <md-filled-tonal-button type="button" data-bs-dismiss="modal">Fechar</md-filled-tonal-button>
-                            <md-filled-button type="button">Ação</md-filled-button>
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button">Jogar</md-filled-button>
                         </div>
                     </div>
                 </div>
@@ -111,7 +109,7 @@
         }
         ?>
     </div>
-
+    
     <div class="row">
         <div class="col">
             <footer>
