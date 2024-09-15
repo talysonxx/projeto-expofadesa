@@ -27,7 +27,6 @@
     </script>
 </head>
 <body>
-
     <div class="container">
         <div class="row mt-2 text-center">
             <div class="col-12 col-md-6">
@@ -38,9 +37,12 @@
             </div>
         </div>
 
-        <div class="row text-center fs-6">
-            <div class="col">
-                <span class="bold-stroke">JOGOS DISPONÍVEIS</span>
+        <div class="row align-items-center text-center mt-4 mt-md-2">
+            <div class="col-12 col-md-6">
+                <button id="teste-botao" type="button" class="btn btn-light">Login conta Google</button>
+            </div>
+            <div class="col-12 col-md-6 mt-md-0 mt-2">
+                <span class="bold-stroke fs-6">JOGOS DISPONÍVEIS</span>
             </div>
         </div>
 

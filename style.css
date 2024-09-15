@@ -1,4 +1,4 @@
-@import url('https://fonts.google   apis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 html {
     overflow-x: hidden;
@@ -191,4 +191,24 @@ span .links:hover {
     /* transition: ; */
     /* text-decoration: underline; */
     color: rgb(211, 197, 197)
+}
+
+
+#teste-botao {
+    background-color: transparent;
+    border: none;
+    /* remove a borda */
+    box-shadow: none;
+    /* remove sombra */
+    color: inherit;
+    /* mantém a cor do texto */
+    padding: 10px 20px;
+    /* opcional: mantém o preenchimento */
+    cursor: pointer;
+    /* muda o cursor para indicar que é um botão clicável */
+} 
+
+#teste-botao:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* opcional: adiciona um leve destaque no hover */
 }
