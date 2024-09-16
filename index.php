@@ -8,7 +8,6 @@
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/dark.css">
     <link rel="stylesheet" href="styles/style.css">
-
     <script type="importmap">
         {
         "imports": {
@@ -22,6 +21,7 @@
 
         document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
+    <script src="scripts/index.js" type="module"></script>
 </head>
 <body>
     <div class="container">
@@ -36,7 +36,7 @@
 
         <div class="row text-center align-items-center mt-4 mt-md-2">
             <div class="col-12 col-md-6">
-                <button type="button" class="btn btn-light">Login conta Google</button>
+                <button id="loginBtn" type="button" class="btn btn-light"><img id="profile" src="https://i.pinimg.com/280x280_RS/1f/67/b3/1f67b374f951dfc4551ad9b067d2adc7.jpg" style="margin-inline: 10px"><p style="all: initial; font-family: BestTen">Login conta Google</p></button>
             </div>
             <div class="col-12 col-md-6 mt-md-0 mt-2">
                 <span class="bold-stroke fs-6">JOGOS DISPONÍVEIS</span>
@@ -94,12 +94,15 @@
                                 </div>
                                 <div class="col-md-8">
                                     <p><?php echo $jogo['descricaoLonga'] ?></p>
+                                    <div class="stats" id="<?php echo str_replace(' ', '', $jogo['nomeJogo']); ?>">
+                                    <H3>Best Score:</H3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal">Fechar</md-filled-tonal-button>
-                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button"><a href="<?php echo $jogo['localJogo'] ?>" target="blank">Jogar</a></md-filled-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="<?php echo $jogo['localJogo'] ?>" target="blank">jogar</md-filled-button>
                         </div>
                     </div>
                 </div>

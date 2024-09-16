@@ -174,3 +174,18 @@ span .links {
 span .links:hover {
     color: rgb(211, 197, 197)
 }
+
+#profile {
+    width: 71px;
+    height: 71;
+    clip-path: circle(50%);
+    background: rgb(198, 198, 198);
+    margin-block: 1px;
+  }
+
+  .stats {
+    width: 100%;
+    background: #0000006b;
+    border-radius: 16px;
+    padding: 40px;
+}
