@@ -34,9 +34,9 @@
             </div>
         </div>
 
-        <div class="row text-center align-items-center mt-4 mt-md-2">
+        <div class="row text-center align-items-center mt-4 mt-md-3">
             <div class="col-12 col-md-6">
-                <button id="loginBtn" type="button" class="btn btn-light"><img id="profile" src="https://i.pinimg.com/280x280_RS/1f/67/b3/1f67b374f951dfc4551ad9b067d2adc7.jpg" style="margin-inline: 10px"><p style="all: initial; font-family: BestTen">Login conta Google</p></button>
+                <button id="loginBtn" type="button" class="btn btn-light"><img id="profile" src="https://i.pinimg.com/280x280_RS/1f/67/b3/1f67b374f951dfc4551ad9b067d2adc7.jpg" style="margin-inline: 10px; width: 50px;"><p style="all: initial; font-family: BestTen">Login conta Google</p></button>
             </div>
             <div class="col-12 col-md-6 mt-md-0 mt-2">
                 <span class="bold-stroke fs-6">JOGOS DISPONÍVEIS</span>
