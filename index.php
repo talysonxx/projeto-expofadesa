@@ -102,7 +102,7 @@
                         </div>
                         <div class="modal-footer">
                             <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal">Fechar</md-filled-tonal-button>
-                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="<?php echo $jogo['localJogo'] ?>" target="blank">jogar</md-filled-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="<?php echo $jogo['localJogo'] ?>" target="blank">Jogar</md-filled-button>
                         </div>
                     </div>
                 </div>
