@@ -46,7 +46,7 @@ function jogos()
             "localJogo" => "games/Cat_Goric/index.html",
         ],
         [
-            "nomeJogo" => "Doodle_Jump",
+            "nomeJogo" => "Doodle Jump",
             "descricaoCurta" => "Salte sem parar, suba plataformas e evite inimigos para alcançar novas alturas!",
             "descricaoLonga" => 'Doodle Jump, você controla uma criatura simpática que deve saltar entre plataformas flutuantes, subindo o mais alto possível. O caminho é cheio de desafios, incluindo inimigos, buracos e plataformas quebradiças. Use sua habilidade para desviar dos perigos, pegar power-ups e alcançar alturas recordes. Com controles simples e jogabilidade viciante, Doodle Jump é um jogo onde o objetivo é superar seus próprios limites a cada salto!',
             "imagemJogo" => "imgs/doodle-jump.png",
