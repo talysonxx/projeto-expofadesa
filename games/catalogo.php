@@ -45,11 +45,12 @@ function jogos()
             "imagemJogo" => "imgs/cat-goric.png",
             "localJogo" => "games/Cat_Goric/index.html",
         ],
-        [
+        
             "nomeJogo" => "Doodle Jump",
             "descricaoCurta" => "Salte sem parar, suba plataformas e evite inimigos para alcançar novas alturas!",
             "descricaoLonga" => 'Doodle Jump, você controla uma criatura simpática que deve saltar entre plataformas flutuantes, subindo o mais alto possível. O caminho é cheio de desafios, incluindo inimigos, buracos e plataformas quebradiças. Use sua habilidade para desviar dos perigos, pegar power-ups e alcançar alturas recordes. Com controles simples e jogabilidade viciante, Doodle Jump é um jogo onde o objetivo é superar seus próprios limites a cada salto!',
             "imagemJogo" => "imgs/doodle-jump.png",
+
             "localJogo" => "games/Doodle_Jump/index.html",
         ],
         [
@@ -67,16 +68,16 @@ function jogos()
             "localJogo" => "games/LOSSST/index.html",
         ],
         [
-            "nomeJogo" => "Stick_Hero_Game",
-            "descricaoCurta" => "isso mesmo",
-            "descricaoLonga" => 'isso mesmo',
+            "nomeJogo" => "Stick Hero",
+            "descricaoCurta" => "Um jogo divertido e viciante em que você precisa estender varas para ajudar seu herói a atravessar plataformas sem cair.",
+            "descricaoLonga" => 'Um jogo divertido e viciante em que você precisa estender varas para ajudar seu herói a atravessar plataformas sem cair.',
             "imagemJogo" => "imgs/jogodamemoria.png",
             "localJogo" => "games/Stick_Hero_Game/index.html",
         ],
         [
-            "nomeJogo" => "Track_Not_Found",
-            "descricaoCurta" => "isso mesmo",
-            "descricaoLonga" => 'isso mesmo',
+            "nomeJogo" => "Trilho não encontrado",
+            "descricaoCurta" => "Um jogo de aventura inspirado em FEZ, onde você controla um trem em um mundo cheio de puzzles e perspectivas desafiadoras.",
+            "descricaoLonga" => "Um jogo de aventura inspirado em FEZ, onde você controla um trem em um mundo cheio de puzzles e perspectivas desafiadoras.",
             "imagemJogo" => "imgs/jogodamemoria.png",
             "localJogo" => "games/Track_Not_Found/index.html",
         ],
