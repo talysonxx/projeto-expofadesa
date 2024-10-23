@@ -30,7 +30,7 @@
                 <img src="imgs/jabu.png" style="width: 110px" alt="logo">
             </div>
             <div class="col-12 col-md-6">
-                <span style="font-size: 45px">Arcade Fudesa</span>
+                <span style="font-size: 45px">Arcade Fadesa</span>
             </div>
         </div>
 

@@ -5,8 +5,8 @@ function jogos()
     $jogos = [
         [
             "nomeJogo" => "Jogo da Cobrinha",
-            "descricaoCurta" => "Alimente a cobra",
-            "descricaoLonga" => "Seu objetivo é fazer sua cobra ser a maior de todas neste game :D",
+            "descricaoCurta" => "No jogo da cobrinha, você controla uma cobra que cresce toda vez que come, e o desafio é não bater nas paredes ou em si mesma.",
+            "descricaoLonga" => "O jogo da cobrinha é um clássico simples e viciante. O jogador controla uma cobra que se move pela tela, com o objetivo de comer pequenos blocos que aparecem aleatoriamente. Cada vez que a cobra come um bloco, ela cresce, tornando-se mais difícil de manobrar. O jogo termina se a cobra bater nas paredes ou em si mesma.",
             "imagemJogo" => "imgs/cobra.jpg",
             "localJogo" => "games/jogo-cobrinha/index.html",
         ],
@@ -32,18 +32,60 @@ function jogos()
             "localJogo" => "games/space-invaders/index.html",
         ],
         [
-            "nomeJogo" => "Sunnyland Plataforma",
-            "descricaoCurta" => "Se aventura na terra ensolarada",
-            "descricaoLonga" => 'isso mesmo',
-            "imagemJogo" => "imgs/sunnyland.png",
-            "localJogo" => "games/sunnyland-platformer/index.html",
-        ],
-        [
             "nomeJogo" => "Jogo da Memoria",
             "descricaoCurta" => "isso mesmo",
             "descricaoLonga" => 'isso mesmo',
             "imagemJogo" => "imgs/jogodamemoria.png",
             "localJogo" => "games/jogo-da-memoria/index.html",
+        ],
+        [
+            "nomeJogo" => "Cat_Goric",
+            "descricaoCurta" => "isso mesmo",
+            "descricaoLonga" => 'isso mesmo',
+            "imagemJogo" => "imgs/jogodamemoria.png",
+            "localJogo" => "games/Cat_Goric/index.html",
+        ],
+        [
+            "nomeJogo" => "Doodle_Jump",
+            "descricaoCurta" => "isso mesmo",
+            "descricaoLonga" => 'isso mesmo',
+            "imagemJogo" => "imgs/jogodamemoria.png",
+            "localJogo" => "games/Doodle_Jump/index.html",
+        ],
+        [
+            "nomeJogo" => "Lamb_Lane",
+            "descricaoCurta" => "isso mesmo",
+            "descricaoLonga" => 'isso mesmo',
+            "imagemJogo" => "imgs/jogodamemoria.png",
+            "localJogo" => "games/Lamb_Lane/index.html",
+        ],
+        [
+            "nomeJogo" => "LOSSST",
+            "descricaoCurta" => "isso mesmo",
+            "descricaoLonga" => 'isso mesmo',
+            "imagemJogo" => "imgs/jogodamemoria.png",
+            "localJogo" => "games/LOSSST/index.html",
+        ],
+        [
+            "nomeJogo" => "Stick_Hero_Game",
+            "descricaoCurta" => "isso mesmo",
+            "descricaoLonga" => 'isso mesmo',
+            "imagemJogo" => "imgs/jogodamemoria.png",
+            "localJogo" => "games/Stick_Hero_Game/index.html",
+        ],
+        [
+            "nomeJogo" => "Track_Not_Found",
+            "descricaoCurta" => "isso mesmo",
+            "descricaoLonga" => 'isso mesmo',
+            "imagemJogo" => "imgs/jogodamemoria.png",
+            "localJogo" => "games/Track_Not_Found/index.html",
+        ],
+        [
+            "nomeJogo" => "Traffic_Run",
+            "descricaoCurta" => "isso mesmo",
+            "descricaoLonga" => 'isso mesmo',
+            "imagemJogo" => "imgs/jogodamemoria.png",
+            "localJogo" => "games/Traffic_Run/index.html",
         ]
     ];
 
