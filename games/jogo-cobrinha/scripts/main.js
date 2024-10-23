@@ -54,19 +54,19 @@ async function main() {
   let bestScore = data.bestScore;
   const playerName = logged ? logged : "noname";
   function criarBackground() {
-    context.fillStyle = "lightgreen";
+    context.fillStyle = "#3C038C";
     context.fillRect(0, 0, 16 * box, 16 * box);
   }
 
   function criarCobra() {
     for (let i = 0; i < snake.length; i++) {
-      context.fillStyle = "green";
+      context.fillStyle = "#160340";
       context.fillRect(snake[i].x, snake[i].y, box, box);
     }
   }
 
   function desenharComida() {
-    context.fillStyle = "red";
+    context.fillStyle = "#BFA59B";
     context.fillRect(comida.x, comida.y, box, box);
   }
 
