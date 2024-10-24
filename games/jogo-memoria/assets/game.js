@@ -1,3 +1,25 @@
+import {
+  auth,
+  LerDados,
+  verifyUser
+} from "../../../scripts/firebase.js";
+
+
+
+
+
+const profilePIC = document.getElementById("profilePIC");
+
+var logged = await verifyUser();
+if (logged) {
+  profilePIC.src = auth.currentUser.photoURL;
+
+
+}
+
+
+
+
 let game = {
   lockMode: false,
   firstCard: null,
@@ -37,7 +59,6 @@ let game = {
   },
   checkGameOver() {
     let gameOver = this.cards.filter(card => !card.flipped).length == 0
-
     return gameOver
   },
   techs: [
@@ -90,3 +111,5 @@ let game = {
     }
   }
 }
+
+export { game };
