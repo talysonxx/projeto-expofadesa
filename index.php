@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row mt-2 text-center align-items-center">
             <div class="col-12 col-md-6">
-                <img src="imgs/jabu.png" style="width: 110px" alt="logo">
+                <img src="imgs/jabu-2.png" style="width: 110px" alt="logo">
             </div>
             <div class="col-12 col-md-6">
                 <span style="font-size: 45px">Arcade Fadesa</span>
