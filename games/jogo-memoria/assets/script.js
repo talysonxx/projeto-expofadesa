@@ -38,7 +38,7 @@ function createCardFace(face, card, element) {
     iconElement.src = './assets/images/' + card.icon + '.png'
     cardElementFace.appendChild(iconElement)
   } else {
-    cardElementFace.innerHTML = '&lt/&gt'
+    cardElementFace.innerHTML = '<img style="width: 150px;" src="assets/images/logo jabu.png">'
   }
 
   element.appendChild(cardElementFace)
@@ -73,3 +73,5 @@ function restart() {
   divGameOver.style.display = 'none'
   startGame()
 }
+
+
