@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>Pong!</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+  <link href="pong.css" media="screen, print" rel="stylesheet" type="text/css" /> 
+</head> 
+ 
+<body> 
+
+  <div id="sidebar">
+
+    <h2>Esse é o Pong!</h2>
+
+    <div class='description'>
+      <p>
+        Pressione <b>1</b> para iniciar o jogo de 1 jogador<br>
+        Pressione <b>2</b> para iniciar o jogo com 2 jogadores<br>
+      </p>
+      <p>
+        Jogador 1: Se movimenta utilizando <b>Q</b> (cima) e o <b>A</b> (baixo) letras.<br>
+        Jogador 2: Se movimenta utilizando <b>P</b> (cima) e o <b>L</b> (baixo) letras.
+      </p>
+      <p>
+        <b>Esc</b> para sair do jogo.
+      </p>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    <p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+      ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
+      ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎Configurações adicionais:</p>
+    <div class='settings'>
+      <label for='sound'>Som: </label>
+      <input type='checkbox' id='sound'>
+    </div>
+
+    <div class='settings'>
+      <label for='stats'>Status: </label>
+      <input type='checkbox' id='stats'>
+    </div>
+
+    <div class='settings'>
+      <label for='footprints'>Passos: </label>
+      <input type='checkbox' id='footprints'>
+    </div>
+
+    <div class='settings'>
+      <label for='predictions'>Predicções: </label>
+      <input type='checkbox' id='predictions'>
+    </div>
+
+  </div>
+
+  <canvas id="game">
+    <div id="unsupported">
+      Desculpe, este exemplo não pode ser executado porque seu navegador não suporta o elemento &lt;canvas&gt;
+    </div>
+  </canvas>
+
+  <script src="game.js" type="text/javascript"></script> 
+  <script src="pong.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  Game.ready(function() {
+
+    var size        = document.getElementById('size');
+    var sound       = document.getElementById('sound');
+    var stats       = document.getElementById('stats');
+    var footprints  = document.getElementById('footprints');
+    var predictions = document.getElementById('predictions');
+
+    var pong = Game.start('game', Pong, {
+      sound:       sound.checked,
+      stats:       stats.checked,
+      footprints:  footprints.checked,
+      predictions: predictions.checked
+    });
+
+    Game.addEvent(sound,       'change', function() { pong.enableSound(sound.checked);           });
+    Game.addEvent(stats,       'change', function() { pong.showStats(stats.checked);             });
+    Game.addEvent(footprints,  'change', function() { pong.showFootprints(footprints.checked);   });
+    Game.addEvent(predictions, 'change', function() { pong.showPredictions(predictions.checked); });
+
+  });
+  </script>
+
+</body> 
+</html>
