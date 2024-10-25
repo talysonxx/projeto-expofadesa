@@ -78,12 +78,11 @@ const instructionsElement = document.getElementById("instructions");
 const resultsElement = document.getElementById("results");
 const accelerateButton = document.getElementById("accelerate");
 const decelerateButton = document.getElementById("decelerate");
-const youtubeLogo = document.getElementById("youtube-main");
+
 
 setTimeout(() => {
   if (ready) instructionsElement.style.opacity = 1;
   buttonsElement.style.opacity = 1;
-  youtubeLogo.style.opacity = 1;
 }, 4000);
 
 // Initialize ThreeJs
@@ -152,7 +151,7 @@ function reset() {
   // Reset position and score
   playerAngleMoved = 0;
   score = 0;
-  scoreElement.innerText = "Press UP";
+  scoreElement.innerText = "Pressione CIMA";
 
   // Remove other vehicles
   otherVehicles.forEach((vehicle) => {
@@ -188,7 +187,6 @@ function startGame() {
     scoreElement.innerText = 0;
     buttonsElement.style.opacity = 1;
     instructionsElement.style.opacity = 0;
-    youtubeLogo.style.opacity = 1;
     renderer.setAnimationLoop(animation);
   }
 }

@@ -39,13 +39,13 @@ function jogos()
             "localJogo" => "games/jogo-memoria/index.html",
         ],
         [
-            "nomeJogo" => "Cat Goric",
+            "nomeJogo" => "Cat Scape",
             "descricaoCurta" => "Use portais para ajudar o gato a coletar todas as joias e avançar de fase!",
             "descricaoLonga" => 'Em Cat Goric, você controla um gato astuto que precisa usar portais mágicos para coletar todas as joias espalhadas pelo mapa. Cada fase traz novos desafios e quebra-cabeças, onde a estratégia é fundamental para escolher o portal certo e evitar armadilhas. Com jogabilidade dinâmica e fases cada vez mais complexas, Cat Goric testa suas habilidades de lógica e exploração. Ajude o gato a coletar todas as joias e descubra o que o aguarda nas fases seguintes!',
             "imagemJogo" => "imgs/cat-goric.png",
             "localJogo" => "games/Cat_Goric/index.html",
         ],
-        
+        [
             "nomeJogo" => "Doodle Jump",
             "descricaoCurta" => "Salte sem parar, suba plataformas e evite inimigos para alcançar novas alturas!",
             "descricaoLonga" => 'Doodle Jump, você controla uma criatura simpática que deve saltar entre plataformas flutuantes, subindo o mais alto possível. O caminho é cheio de desafios, incluindo inimigos, buracos e plataformas quebradiças. Use sua habilidade para desviar dos perigos, pegar power-ups e alcançar alturas recordes. Com controles simples e jogabilidade viciante, Doodle Jump é um jogo onde o objetivo é superar seus próprios limites a cada salto!',
@@ -54,7 +54,7 @@ function jogos()
             "localJogo" => "games/Doodle_Jump/index.html",
         ],
         [
-            "nomeJogo" => "Lamb_Lane",
+            "nomeJogo" => "Atravesse a estrada!",
             "descricaoCurta" => "isso mesmo",
             "descricaoLonga" => 'isso mesmo',
             "imagemJogo" => "imgs/jogodamemoria.png",
@@ -82,14 +82,14 @@ function jogos()
             "localJogo" => "games/Track_Not_Found/index.html",
         ],
         [
-            "nomeJogo" => "Traffic_Run",
+            "nomeJogo" => " Percurso Circular",
             "descricaoCurta" => "isso mesmo",
             "descricaoLonga" => 'isso mesmo',
             "imagemJogo" => "imgs/jogodamemoria.png",
             "localJogo" => "games/Traffic_Run/index.html",
         ],
         [
-            "nomeJogo" => "Pong",
+            "nomeJogo" => "Pong!! (1979)",
             "descricaoCurta" => "isso mesmo",
             "descricaoLonga" => 'isso mesmo',
             "imagemJogo" => "imgs/jogodamemoria.png",
