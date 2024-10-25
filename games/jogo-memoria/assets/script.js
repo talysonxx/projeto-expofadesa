@@ -11,7 +11,7 @@ var logged = await verifyUser();
 let data;
 data = {
   usuario: "usuario sem nome",
-  bestScore: localStorage.getItem("bestscore2") || 0,
+  bestScore: localStorage.getItem("bestscore2") || "0",
 };
 
 const bestscoreP = document.getElementById("bestScore");
@@ -28,6 +28,7 @@ async function lerDB() {
   }
 }
 
+lerDB()
 
 class Timer {
   constructor() {
@@ -144,10 +145,15 @@ function flipCard() {
           let divGameOver = document.getElementById('game-over');
           divGameOver.style.display = 'flex';
           console.log("Game Over! Final score:", finalScore);
-          if (finalScore < data.bestScore || data.bestScore == undefined || data.bestScore == null) {
+          if (finalScore < data.bestScore || data.bestScore == undefined || data.bestScore == null || data.bestScore == "0") {
             data.bestScore = finalScore;
             if (logged) {
-              Send("jogo2", finalScore);
+              try {
+                Send("jogo2", finalScore);
+              } catch (error) {
+                console.log(error);
+                
+              }
             } else {
               localStorage.setItem("bestscore2", finalScore);
             }
