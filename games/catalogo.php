@@ -42,7 +42,7 @@ function jogos()
             "nomeJogo" => "Cat Scape",
             "descricaoCurta" => "Use portais para ajudar o gato a coletar todas as joias e avançar de fase!",
             "descricaoLonga" => 'Em Cat Goric, você controla um gato astuto que precisa usar portais mágicos para coletar todas as joias espalhadas pelo mapa. Cada fase traz novos desafios e quebra-cabeças, onde a estratégia é fundamental para escolher o portal certo e evitar armadilhas. Com jogabilidade dinâmica e fases cada vez mais complexas, Cat Goric testa suas habilidades de lógica e exploração. Ajude o gato a coletar todas as joias e descubra o que o aguarda nas fases seguintes!',
-            "imagemJogo" => "imgs/cat-goric.png",
+            "imagemJogo" => "imgs/cat_space.png",
             "localJogo" => "games/Cat_Goric/index.html",
         ],
         [
@@ -85,7 +85,7 @@ function jogos()
             "nomeJogo" => " Percurso Circular",
             "descricaoCurta" => "Complete voltas sem colisões para ganhar pontos.",
             "descricaoLonga" => 'Em Percurso Circular, você assume o controle de um carro que precisa completar voltas perfeitas em um circuito em formato de círculo duplo. A cada volta completa sem colisões com outros veículos, como carros e caminhões, sua pontuação aumenta. Teste suas habilidades de reflexo e estratégia para manter-se na pista, desviar dos obstáculos e alcançar o maior número de voltas. Concentre-se e acumule pontos enquanto desafia seus limites em uma corrida sem fim!',
-            "imagemJogo" => "imgs/jogodamemoria.png",
+            "imagemJogo" => "imgs/pc_tambi.png",
             "localJogo" => "games/Traffic_Run/index.html",
         ],
         [
