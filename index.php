@@ -95,7 +95,7 @@
                                 <div class="col-md-8">
                                     <p><?php echo $jogo['descricaoLonga'] ?></p>
                                     <div class="stats" id="<?php echo str_replace(' ', '', $jogo['nomeJogo']); ?>">
-                                    <H3>Best Score:</H3>
+                                    <H3>Melhor Pontuação:</H3>
                                     </div>
                                 </div>
                             </div>
