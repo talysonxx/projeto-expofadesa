@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcade Fadesa</title>
-
+    <link rel="icon" type="image/png" href="imgs/jabu.png">
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/dark.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -95,7 +95,7 @@
                                 <div class="col-md-8">
                                     <p><?php echo $jogo['descricaoLonga'] ?></p>
                                     <div class="stats" id="<?php echo str_replace(' ', '', $jogo['nomeJogo']); ?>">
-                                    <H3>Best Score:</H3>
+                                    <H3>Melhor Pontuação:</H3>
                                     </div>
                                 </div>
                             </div>
