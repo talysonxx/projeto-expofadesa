@@ -4,7 +4,7 @@ function jogos()
 {
     $jogos = [
         [ // ok
-            "nomeJogo" => "Jogo da Cobrinha",
+            "nomeJogo" => "Jogo da Cobrinh",
             "descricaoCurta" => "No jogo da cobrinha, você controla uma cobra que cresce toda vez que come, e o desafio é não bater nas paredes ou em si mesma.",
             "descricaoLonga" => "O jogo da cobrinha é um clássico simples e viciante. O jogador controla uma cobra que se move pela tela, com o objetivo de comer pequenos blocos que aparecem aleatoriamente. Cada vez que a cobra come um bloco, ela cresce, tornando-se mais difícil de manobrar. O jogo termina se a cobra bater nas paredes ou em si mesma.",
             "imagemJogo" => "imgs/jogo-cobrinha.png",
