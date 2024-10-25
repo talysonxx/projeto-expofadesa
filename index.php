@@ -25,7 +25,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="mt-2" style="background: linear-gradient(153deg, #003937, #36052994);backdrop-filter: blur(1px); padding: 10px; border-radius: 20px;">    
+        <div class="mt-2">    
             <div class="row mt-2 text-center align-items-center">
                 <div class="col-12 col-md-6">
                     <img src="imgs/jabu.png" style="width: 110px" alt="logo">
