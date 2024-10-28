@@ -34,7 +34,7 @@ const firebaseConfig = {
   projectId: "catalog-ed359",
   storageBucket: "catalog-ed359.appspot.com",
   messagingSenderId: "701733858632",
-  appId: "1:701733858632:web:2bc7f61cf9119382ee577d",
+  appId: "1:701733858632:web:2bc7f61cf9119382ee577d"
 };
 
 // Inicializa o Firebase com a configuração fornecida
@@ -86,10 +86,10 @@ async function Send(idjogo, value) {
 
   }
 
-async function LerDados() {
+async function LerDados(idjogo) {
     return new Promise((resolve, reject) => {
       onAuthStateChanged(auth, async (user) => {
-        const idJogo = "jogo1";
+        const idJogo = idjogo;
         const docRef = doc(db, `users/${userUid}/Game_Stats`, idJogo);
         try {
           const docSnap = await getDoc(docRef);

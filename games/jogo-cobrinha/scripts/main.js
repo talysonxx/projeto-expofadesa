@@ -15,7 +15,7 @@ import {
 
 let data;
 data = {
-  usuario: "usuario sem nomee",
+  usuario: "usuario sem nome",
   bestScore: localStorage.getItem("bestscore") || 0,
 };
 
@@ -23,8 +23,7 @@ data = {
 
 async function lerDB() {
   try {
-    data = await LerDados();
-    console.log("foda", data);
+    data = await LerDados("jogo1");
     return data;
   } catch (error) {
     console.log(error);
@@ -77,7 +76,7 @@ async function main() {
     ).textContent = `Pontuação Atual: ${currentScore}`;
     document.getElementById(
       "bestScore"
-    ).textContent = `Melhor Pontuação: ${bestScore}`;
+    ).textContent = `Melhor Pontuação: ${bestScore ? bestScore : 0}`;
   }
 
   function update(event) {
@@ -93,7 +92,7 @@ async function main() {
 
   async function finalizarJogo() {
     clearInterval(jogo);
-    if (currentScore > bestScore) {
+    if (currentScore > bestScore || bestScore == undefined || bestScore == null) {
       bestScore = currentScore;
       if (logged) {
         await Send("jogo1", bestScore);
@@ -101,8 +100,7 @@ async function main() {
         localStorage.setItem("bestscore", bestScore);
       }
     }
-    updateScoreboard();
-    alert("GAME OVER, a página será recarregada automaticamente em 3 segundos");
+    alert("GAME OVER, pontuação final: " + currentScore);
     location.reload();
   }
 

@@ -14,11 +14,18 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #c7cdd3;
+  flex-direction: column;
 }
 
+.timer {
+  padding: 10px;
+  font-size: 40px;
+}
+
+
 .card {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
 
   position: relative;
   transform-style: preserve-3d;
@@ -45,15 +52,22 @@ body {
   transform: rotateY(180deg);
 }
 .card-front {
-  background-color: #22426b;
+  background-color: #165808;
   transform: rotateY(180deg);
 }
 .card-back {
   color: #101c2c;
-  background-color: #05c3ff;
+  background-color: #66e412;
   font-size: 30px;
-  /* display: none; */
+  
 }
+.card assets/images/logo jabu.png {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* Outros estilos aqui */
+}
+
 .icon {
   width: 65%;
 }
@@ -75,7 +89,7 @@ body {
 #restart {
   padding: 15px;
   font-size: 1.5rem;
-  background-color: yellow;
+  background-color: rgb(72, 255, 0);
   border: none;
   border-radius: 10px;
   margin-top: 10px;
@@ -83,15 +97,15 @@ body {
 }
 #restart:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 0, 0.734);
+  background-color: rgba(136, 255, 0, 0.734);
 }
 
 #game-board {
-  max-width: 700px;
-
+  max-width: 1000px;
+max-height: 550px;
   display: grid;
-  /* 5 line and 4 columns */
-  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  /* 5 line and 5 columns */
+  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
   /* distance between elements */
-  gap: 10px;
+  gap: 20px;
 }
