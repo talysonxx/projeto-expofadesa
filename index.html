@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="Expo Fadesa | Jabu Games">
+    <title>Expo Fadesa | Jabu Games</title>
+
+    <link rel="icon" type="imagem/png" href="./img/logo.png" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/starsStyle.css">    
+    <link rel="stylesheet" href="./css/carouselStyle.css"> 
+    
+</head>
+
+<body>
+    <div id="container">
+        <header class="header">
+            <nav data-anime="left" class="navbar">
+                <a href="jabu/index.php" title="Acesse nosso site de jogos!"><img src="img/jabu.png" id="logo" alt="logo"></a>
+                <ul style="list-style: none;" class="nav-menu">
+                    <li class="nav-item">
+                        <a href="jabu/index.php" class="nav-link">Site de jogos!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre" class="nav-link">Integrantes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Projeto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tecnologias" class="nav-link">Tecnologias</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+            <p>Role para baixo</p>
+            <div id="starsImg">
+                <canvas id="stars"></canvas>
+            </div>
+    </header>
+           
+        <!-- Section SOBRE-->
+        
+        <section id="sobre">
+            <h1 data-anime="left">Integrantes</h1>
+            <div id="integrantes-container" class="integrantes-container" data-anime="left">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="./img/fotoaurelio.jpg" alt="Foto de Aurelio Gabriel Alves de Sousa" class="card-img">
+                    <div class="card-body">
+                        <h2 class="card-title">Aurelio Gabriel Alves de Sousa</h2>
+                        <p class="card-text">Desenvolvedor Fullstack com experiência em tecnologias modernas...</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="./img/Eduardo.jpg" alt="Foto de Eduardo da Silva Souza" class="card-img">
+                    <div class="card-body">
+                        <h2 class="card-title">Eduardo da Silva Souza</h2>
+                        <p class="card-text">Sobre o Integrante 2: Engenheiro de Software com foco em design responsivo...</p>
+                    </div>
+                </div>
+                  <!-- Card 3 -->
+                  <div class="card">
+                    <img src="./img/Amos.jpg" alt="Foto de Elielson Amós Rodrigues Carneiro" class="card-img">
+                    <div class="card-body">
+                        <h2 class="card-title">Elielson Amós Rodrigues C.</h2>
+                        <p class="card-text">Sobre o Integrante 3: Engenheiro de Software com foco em design responsivo...</p>
+                    </div>
+                </div>
+                  <!-- Card 4 -->
+                  <div class="card">
+                    <img src="./img/kirito.jpg" alt="Talyson André Alves" class="card-img">
+                    <div class="card-body">
+                        <h2 class="card-title">Talyson André Alves</h2>
+                        <p class="card-text">Sobre o Integrante 2: Engenheiro de Software com foco em design responsivo...</p>
+                    </div>
+                </div>
+                  <!-- Card 5 -->
+                  <div class="card">
+                    <img src="./img/Icaro.jpg" alt="Ícaro Araújo Milhomem Júnior" class="card-img">
+                    <div class="card-body">
+                        <h2 class="card-title">Ícaro Araújo Milhomem Júnior</h2>
+                        <p class="card-text">Sobre o Integrante 2: Engenheiro de Software com foco em design responsivo...</p>
+                    </div>
+                </div>
+                  <!-- Card 6 -->
+                  <div class="card">
+                    <img src="./img/Esdras.jpg" alt="Esdras Borges Morais" class="card-img">
+                    <div class="card-body">
+                        <h2 class="card-title">Esdras Borges Morais</h2>
+                        <p class="card-text">Sobre o Integrante 2: Engenheiro de Software com foco em design responsivo...</p>
+                    </div>
+                </div>
+                  <!-- Card 7 -->
+                  <div class="card">
+                    <img src="./img/joao.jpg" alt="João Paulo da Silva Melo" class="card-img">
+                    <div class="card-body">
+                        <h2 class="card-title">João Paulo da Silva Melo</h2>
+                        <p class="card-text">Sobre o Integrante 2: Engenheiro de Software com foco em design responsivo...</p>
+                    </div>
+                </div>
+                  <!-- Card 8 -->
+                  <div class="card">
+                    <img src="./img/marlon.jpg" alt="Marlon Brando Sousa Lima" class="card-img">
+                    <div class="card-body">
+                        <h2 class="card-title">Marlon Brando Sousa Lima</h2>
+                        <p class="card-text">Sobre o Integrante 2: Engenheiro de Software com foco em design responsivo...</p>
+                    </div>
+                </div>
+                  <!-- Card 9 -->
+                <div class="card">
+                    <img src="./img/foto2.jpg" alt="Henrique Sousa Guimarães" class="card-img">
+                    <div class="card-body">
+                        <h2 class="card-title">Henrique Sousa Guimarães</h2>
+                        <p class="card-text">Sobre o Integrante 2: Engenheiro de Software com foco em design responsivo...</p>
+                    </div>
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </div>
+        </section>
+        
+        <!-- Section projeto-->
+
+        <section  id="portfolio">
+            <h1 data-anime="left">Projeto</h1>
+            <p data-anime="right" class="portfoliotext">Clique na imagem para acessar o projeto</p>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                    <div class="carousel-item">
+                      <a href="link site">
+                        <img id="portfolioImg" class="portimg" src="./img/port1.png"></a>   
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                    <div class="carousel-item">
+                      <a href="link site">
+                        <img id="portfolioImg" class="portimg" src="./img/port2.png"></a>  
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                    <div class="carousel-item">
+                       <a href="link site">
+                        <img id="portfolioImg" class="portimg" src="./img/port3.png"></a> 
+                    </div>
+                    <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+                    <label for="carousel-2" class="carousel-control next control-1">›</label>
+                    <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                    <label for="carousel-3" class="carousel-control next control-2">›</label>
+                    <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                    <label for="carousel-1" class="carousel-control next control-3">›</label>
+                    <ol class="carousel-indicators">
+                        <li>
+                            <label for="carousel-1" class="carousel-bullet">•</label>
+                        </li>
+                        <li>
+                            <label for="carousel-2" class="carousel-bullet">•</label>
+                        </li>
+                        <li>
+                            <label for="carousel-3" class="carousel-bullet">•</label>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!--tecnologias-->
+        <section id="tecnologias">
+            <h1 data-anime="left">Tecnologias</h1>
+            <div class="tecs" data-anime>
+                <div>
+                    <i class="fab fa-html5 vermelho"></i>
+                    <p>HTML5</p>
+                    <div class="contagem">
+                    </div>
+                </div>
+                <div>
+                    <img src="./img/python-logo.png" alt="python" style="width: 100px; height: 100px;">
+                    <p>Python</p>
+                    <div class="contagem">
+                    </div>
+                </div>
+                <div>
+                    <i class="fab fa-css3-alt azul"></i>
+                    <p>CSS3</p>
+                    <div class="contagem">
+                    </div>
+                </div>
+                <div>
+                    <i class="fab fa-js-square amarelo"></i>
+                    <p>JavaScript</p>
+                    <div class="contagem">
+                    </div>
+                </div>
+            </div>
+            <div class="tecs" data-anime>
+                <div>
+                    <img src="./img/php.png" alt="PHP" style="width: 100px; height: 100px;">
+                    <p>PHP</p>
+                    <div class="contagem">
+                    </div>
+                </div>
+                <div>
+                    <i class="fas fa-laptop cinza"></i>
+                    <p>Design Responsivo</p>
+                    <div class="contagem">
+                    </div>
+                </div>
+                <div>
+                    <i class="fab fa-git coral"></i>
+                    <p>Git</p>
+                    <div class="contagem">
+                    </div>
+                </div>
+                <div>
+                    <i class="fab fa-bootstrap roxo"></i>
+                    <p>BootStrap</p>
+                    <div class="contagem">
+                    </div>
+                </div>
+            </div>
+            <div class="tecs" data-anime>
+                <div>
+                    <img src="./img/sql.png" alt="sql" style="width: 100px; height: 100px;">
+                    <p>SQL</p>
+                    <div class="contagem">
+                    </div>
+                </div>
+                <div>
+                    <img src="./img/mysql.png" alt="mysql" style="width: 100px; height: 100px;">
+                    <p>MySQL</p>
+                    <div class="contagem">
+                    </div>
+                </div>
+                <!-- Caso queira colocar mais tecnologia-->
+            </div>
+        </section>
+        <footer>
+            <div>
+                <h2>JABU GAMES</h2>
+                <p>Todos os direitos reservados © 2024.</p>
+            </div>
+        </footer>
+        <script src="./js/main.js"></script>
+        <script src="./js/starsScript.js"></script>
+        <script src="https://kit.fontawesome.com/bb5a28c4c3.js" crossorigin="anonymous"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-157870898-1');
+        </script>
+
+    </div>
+</body>
+
+</html>
