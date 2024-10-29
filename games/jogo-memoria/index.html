@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <title>Jogo da mamória</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="timer">Tempo de Jogo: <span id="tens">00:00</span></div>
+  <div id="game-board">
+    
+      <div id="312" class="card" data-icon="bootstrap">
+        <div class="card-front">
+          <img class="icon" src="assets/images/git.png">
+        </div>
+        <div class="card-back">
+          <img src="assets/images/logo jabu.png" alt="">
+        </div>
+      </div>
+    
+  </div>
+  <div id="game-over">
+    <div>
+      Muito bem! Você finalizou o jogo mais dificil da ExpoFadesa!!! 
+    </div>
+    <button id="restart">Jogar novamente !!! </button>
+  </div>
+  <div style="    padding: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+" >
+  <img id="profilePIC" src="https://static-00.iconduck.com/assets.00/profile-circle-icon-2048x2048-cqe5466q.png" alt="imagem de perfil" style="width: 64px; margin: 10px;">
+    <p id="bestScore">Melhor tempo: </p>
+  <script src="assets/game.js" type="module" defer></script>
+  <script src="assets/script.js" type="module"></script>
+</body>
+</html>
