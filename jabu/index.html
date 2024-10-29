@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcade Fadesa</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <link rel="icon" type="image/png" href="imgs/jabu.png">
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/dark.css">
@@ -15,6 +16,7 @@
         }
         }
     </script>
+
     <script type="module">
         import '@material/web/all.js';
         import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
@@ -273,9 +275,13 @@
                                     <img src="imgs/jogo-cobrinha.png" class="img-fluid" alt="Imagem 1">
                                 </div>
                                 <div class="col-md-8">
-                                    <p>O jogo da cobrinha é um clássico simples e viciante. O jogador controla uma cobra que se move pela tela, com o objetivo de comer pequenos blocos que aparecem aleatoriamente. Cada vez que a cobra come um bloco, ela cresce, tornando-se mais difícil de manobrar. O jogo termina se a cobra bater nas paredes ou em si mesma.</p>
+                                    <p>O jogo da cobrinha é um clássico simples e viciante. O jogador controla uma cobra que se move pela tela, com o objetivo de comer pequenos blocos que aparecem aleatoriamente. Cada vez que a cobra come um bloco, ela cresce, tornando-se mais difícil de manobrar. O jogo termina se a cobra bater em si mesma.</p>
                                     <div class="stats" id="JogodaCobrinha">
-                                    <H3>Melhor Pontuação:</H3>
+                                    <div id="jogo1-leaderboard">
+                                   
+                                   <!-- aqui vai o placar -->
+                                    
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -303,9 +309,9 @@
                                 </div>
                                 <div class="col-md-8">
                                     <p>Em Tower Defense, sua missão é proteger o reino contra hordas de monstros implacáveis. Construa torres estrategicamente ao longo do caminho e melhore suas defesas para impedir que os inimigos avancem. Cada onda de monstros traz novos desafios, e você precisará de inteligência e rapidez para sobreviver. Não permita que eles cheguem ao outro lado e destrua tudo o que encontrar pela frente!</p>
-                                    <div class="stats" id="TowerDefense">
+                                    <!-- <div class="stats" id="TowerDefense">
                                     <H3>Melhor Pontuação:</H3>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -391,8 +397,12 @@
                                 <div class="col-md-8">
                                     <p>No Jogo da Memória, o desafio é encontrar todos os pares de cartas iguais em uma série de tentativas. As cartas estão viradas para baixo, e você deve lembrar onde cada uma está após revelá-las. Teste e desenvolva sua memória enquanto busca completar o jogo no menor número de jogadas possível. À medida que os níveis avançam, o número de cartas aumenta, tornando o jogo ainda mais desafiador!</p>
                                     <div class="stats" id="JogodaMemória">
-                                    <H3>Melhor Pontuação:</H3>
+                                    <div id="jogo2-leaderboard">
+                                           
+                                           <!-- aqui vai o placar -->
+                                            
                                     </div>
+                                </div>
                                 </div>
                             </div>
                         </div>

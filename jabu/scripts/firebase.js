@@ -23,7 +23,8 @@ import {
   limit,
   query,
   deleteDoc,
-  updateDoc
+  updateDoc,
+  where
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 
@@ -123,6 +124,43 @@ async function LerDados(idjogo) {
   }
   
 
+  async function getLeaderboard(idJogo) {
+    return new Promise((resolve, reject) => {
+      // Usa collectionGroup para buscar em toda a subcoleção Game_Stats
+      const q = query(
+        collectionGroup(db, "Game_Stats"),
+        where("bestScore", ">", 0)
+      );
+  
+      getDocs(q)
+        .then((querySnapshot) => {
+          const leaderboard = [];
+          querySnapshot.forEach((doc) => {
+            const data = doc.data();
+  
+            // Confirma que o documento corresponde ao jogo específico
+            if (doc.id === idJogo) {
+              leaderboard.push({
+                displayName: data.usuario,
+                icon: data.avatarUrl,
+                bestScore: data.bestScore,
+              });
+            }
+          });
+  
+          // Ordena a leaderboard por pontuação em ordem decrescente
+          resolve(leaderboard.sort((a, b) => b.bestScore - a.bestScore));
+        })
+        .catch((error) => {
+          console.error("Erro ao obter leaderboard:", error);
+          reject(error);
+        });
+    });
+  }
+
+
+
+
 // Exporta as funções e métodos para serem utilizados em outros módulos
 export {
   auth,
@@ -145,5 +183,6 @@ export {
   Send,
   updateDoc,
   LerDados,
-  verifyUser
+  verifyUser,
+  getLeaderboard
 };

@@ -15,6 +15,7 @@ body {
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: none;
     /* Desativa a suavização de fontes no Firefox no macOS */
+    padding-right: 0px !important;
 }
 
 .bold-stroke {
@@ -66,8 +67,9 @@ body {
 }
 
 .card {
-    background: linear-gradient(153deg, #003937, #36052994);
+    padding: 10px;
     backdrop-filter: blur(10px);
+    background: linear-gradient(153deg, #003937, #36052994);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -75,7 +77,6 @@ body {
     align-items: center;
     transition: transform ease 200ms;
 }
-
 .card:hover {
     transform: perspective(1px) scale(1.08) translateY(1.01px);
     transition: transform ease 200ms;
@@ -92,7 +93,7 @@ body {
 }
 
 .card img {
-    padding: 10px;
+
     border-radius: 20px;
 }
 
@@ -195,5 +196,22 @@ a #apresentacao:hover {
     width: 100%;
     background: #0000006b;
     border-radius: 16px;
-    padding: 40px;
+    padding-block: 49px;
+    padding-inline: 20px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    clip-path: circle(50%);
+    background: rgb(198, 198, 198);
+    margin-block: 1px;
+  }
+
+.leaderboard-item {
+    border-radius: 20px;
+    padding: 10px;
+    color: #85e1f4;
+    background-color: #002a4c;
+    margin-bottom: 10px;
 }
