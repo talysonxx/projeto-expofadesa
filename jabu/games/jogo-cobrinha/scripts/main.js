@@ -13,28 +13,29 @@ import {
   verifyUser
 } from "../../../scripts/firebase.js";
 
+let idJogo = "jogo1"; // defina de antemão o id do jogo aqui
+ // define a data caso o usuário não possua dads=os ou caso o usuário não esteja logado	(sem conta)
 let data;
 data = {
   usuario: "usuario sem nome",
-  bestScore: localStorage.getItem("bestscore") || 0,
+  bestScore: localStorage.getItem("jogo1-bestScore") || 0, // caso tenha dados no localstorage, pega, caso não, pega 0
 };
 
 
 
-async function lerDB() {
+async function lerDB() { // pega os dados do bd
   try {
-    data = await LerDados("jogo1");
-    return data;
+    data = await LerDados(idJogo); // id do jogo da cobrinha: jogo1
+    return data; 
   } catch (error) {
     console.log(error);
   }
 }
 
 async function main() {
-  console.log(await verifyUser());
- var logged = await verifyUser();
+ var logged = await verifyUser(); // verifica se o usuário esta logado
   if (logged) {
-    await lerDB();
+    await lerDB(); // soobrescreve a data caso o usuário tenha dados
   }
 
   let canvas = document.querySelector("canvas#snake");
@@ -51,7 +52,9 @@ async function main() {
 
   let currentScore = 0;
   let bestScore = data.bestScore;
-  const playerName = logged ? logged : "noname";
+
+  const playerName = logged ? logged : data.usuario; // condição ? se verdadeiro : se falso
+  
   function criarBackground() {
     context.fillStyle = "#3C038C";
     context.fillRect(0, 0, 16 * box, 16 * box);
@@ -95,9 +98,9 @@ async function main() {
     if (currentScore > bestScore || bestScore == undefined || bestScore == null) {
       bestScore = currentScore;
       if (logged) {
-        await Send("jogo1", bestScore);
+        await Send(idJogo, bestScore); // se logado, salva no bd
       } else {
-        localStorage.setItem("bestscore", bestScore);
+        localStorage.setItem('jogo1-bestScore', bestScore); // se não logado, salva no localstorage
       }
     }
     alert("GAME OVER, pontuação final: " + currentScore);
