@@ -1,0 +1,621 @@
+<html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Fadesa</title>
+
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/dark.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="importmap">
+        {
+        "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
+        }
+        }
+    </script>
+    <script type="module">
+        import '@material/web/all.js';
+        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+    <script src="scripts/index.js" type="module"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-2 text-center align-items-center">
+            <div class="col-12 col-md-6">
+                <img src="imgs/jabu-2.png" style="width: 110px" alt="logo">
+            </div>
+            <div class="col-12 col-md-6">
+                <span style="font-size: 45px">Arcade Fadesa</span>
+            </div>
+        </div>
+
+        <div class="row text-center align-items-center mt-4 mt-md-3">
+            <div class="col-12 col-md-6">
+                <button id="loginBtn" type="button" class="btn btn-light"><img id="profile" src="https://lh3.googleusercontent.com/a/ACg8ocLyTpdd8WnGDZHwwsU7es_NoXq5hWWZovXbUkY2YHRVn0Ztmk8=s96-c" style="margin-inline: 10px; width: 50px;"><p style="all: initial; font-family: BestTen">LOGOUT</p></button>
+            </div>
+            <div class="col-12 col-md-6 mt-md-0 mt-2">
+                <span class="bold-stroke fs-6">JOGOS DISPONÍVEIS</span>
+            </div>
+        </div>
+
+                
+        <!-- AQUI VAI O CATÁLOGO DE JOGOS -->
+        <div class="row" id="linhaCards">
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/jogo-cobrinha.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Jogo da Cobrinha</h5>
+                            <p class="card-text">No jogo da cobrinha, você controla uma cobra que cresce toda vez que come, e o desafio é não bater nas paredes ou em si mesma.</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalJogodaCobrinha" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/tower-defense.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Tower Defense</h5>
+                            <p class="card-text">Não permita que os monstros passem para o outro lado</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalTowerDefense" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/pac-man.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">PacMan</h5>
+                            <p class="card-text">Coma todos os pontos enquanto foge dos fantasmas!</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalPacMan" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/space-invaders.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Space Invaders</h5>
+                            <p class="card-text">Defenda a Terra de ondas de alienígenas invasores!</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalSpaceInvaders" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/jogo-memoria.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Jogo da Memória</h5>
+                            <p class="card-text">Encontre os pares de cartas iguais usando sua memória!</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalJogodaMemória" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/cat-goric.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Cat Goric</h5>
+                            <p class="card-text">Use portais para ajudar o gato a coletar todas as joias e avançar de fase!</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalCatGoric" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/doodle-jump.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Doodle Jump</h5>
+                            <p class="card-text">Salte sem parar, suba plataformas e evite inimigos para alcançar novas alturas!</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalDoodleJump" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/jogodamemoria.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Lamb_Lane</h5>
+                            <p class="card-text">isso mesmo</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalLamb_Lane" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/jogodamemoria.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">LOSSST</h5>
+                            <p class="card-text">isso mesmo</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalLOSSST" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/jogodamemoria.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Stick Hero</h5>
+                            <p class="card-text">Um jogo divertido e viciante em que você precisa estender varas para ajudar seu herói a atravessar plataformas sem cair.</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalStickHero" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/jogodamemoria.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Trilho não encontrado</h5>
+                            <p class="card-text">Um jogo de aventura inspirado em FEZ, onde você controla um trem em um mundo cheio de puzzles e perspectivas desafiadoras.</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalTrilhonãoencontrado" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/jogodamemoria.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Traffic_Run</h5>
+                            <p class="card-text">isso mesmo</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalTraffic_Run" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="imgs/jogodamemoria.png" class="card-img-top" alt="Imagem 1">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Pong</h5>
+                            <p class="card-text">isso mesmo</p>
+                            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal" data-bs-target="#modalPong" value="" has-icon="">
+                                Sobre o jogo
+                                <svg slot="icon" viewBox="0 0 48 48">
+                                    <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z"></path>
+                                </svg>
+                            </md-outlined-button>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+
+                    <!-- Modal -->
+            <div class="modal fade" id="modalJogodaCobrinha" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Jogo da Cobrinha</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/jogo-cobrinha.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>O jogo da cobrinha é um clássico simples e viciante. O jogador controla uma cobra que se move pela tela, com o objetivo de comer pequenos blocos que aparecem aleatoriamente. Cada vez que a cobra come um bloco, ela cresce, tornando-se mais difícil de manobrar. O jogo termina se a cobra bater nas paredes ou em si mesma.</p>
+                                    <div class="stats" id="JogodaCobrinha">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/jogo-cobrinha/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalTowerDefense" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Tower Defense</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/tower-defense.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>Em Tower Defense, sua missão é proteger o reino contra hordas de monstros implacáveis. Construa torres estrategicamente ao longo do caminho e melhore suas defesas para impedir que os inimigos avancem. Cada onda de monstros traz novos desafios, e você precisará de inteligência e rapidez para sobreviver. Não permita que eles cheguem ao outro lado e destrua tudo o que encontrar pela frente!</p>
+                                    <div class="stats" id="TowerDefense">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/tower-defense/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalPacMan" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">PacMan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/pac-man.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>Em Pacman, você controla um personagem que deve comer todos os pontos em um labirinto cheio de perigos. Quatro fantasmas estão à espreita, prontos para te pegar, mas com estratégia e habilidade, você pode evitar o confronto. Colete as pílulas especiais para virar o jogo e perseguir os fantasmas temporariamente. A cada nível, os desafios aumentam, exigindo reflexos rápidos e decisões inteligentes.</p>
+                                    <div class="stats" id="PacMan">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/pacman/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalSpaceInvaders" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Space Invaders</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/space-invaders.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>Em Space Invaders, você assume o controle de uma nave espacial e sua missão é proteger o planeta de uma invasão alienígena. Enfrente ondas de inimigos que descem lentamente em direção à Terra, enquanto atira para destruí-los antes que alcancem seu objetivo. Quanto mais você avança, mais rápidos e desafiadores os alienígenas se tornam. Use sua agilidade para desviar dos tiros inimigos e salvar a humanidade dessa ameaça espacial!</p>
+                                    <div class="stats" id="SpaceInvaders">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/space-invaders/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalJogodaMemória" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Jogo da Memória</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/jogo-memoria.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>No Jogo da Memória, o desafio é encontrar todos os pares de cartas iguais em uma série de tentativas. As cartas estão viradas para baixo, e você deve lembrar onde cada uma está após revelá-las. Teste e desenvolva sua memória enquanto busca completar o jogo no menor número de jogadas possível. À medida que os níveis avançam, o número de cartas aumenta, tornando o jogo ainda mais desafiador!</p>
+                                    <div class="stats" id="JogodaMemória">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/jogo-memoria/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalCatGoric" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Cat Goric</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/cat-goric.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>Em Cat Goric, você controla um gato astuto que precisa usar portais mágicos para coletar todas as joias espalhadas pelo mapa. Cada fase traz novos desafios e quebra-cabeças, onde a estratégia é fundamental para escolher o portal certo e evitar armadilhas. Com jogabilidade dinâmica e fases cada vez mais complexas, Cat Goric testa suas habilidades de lógica e exploração. Ajude o gato a coletar todas as joias e descubra o que o aguarda nas fases seguintes!</p>
+                                    <div class="stats" id="CatGoric">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/Cat_Goric/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalDoodleJump" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Doodle Jump</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/doodle-jump.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>Doodle Jump, você controla uma criatura simpática que deve saltar entre plataformas flutuantes, subindo o mais alto possível. O caminho é cheio de desafios, incluindo inimigos, buracos e plataformas quebradiças. Use sua habilidade para desviar dos perigos, pegar power-ups e alcançar alturas recordes. Com controles simples e jogabilidade viciante, Doodle Jump é um jogo onde o objetivo é superar seus próprios limites a cada salto!</p>
+                                    <div class="stats" id="DoodleJump">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/Doodle_Jump/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalLamb_Lane" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Lamb_Lane</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/jogodamemoria.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>isso mesmo</p>
+                                    <div class="stats" id="Lamb_Lane">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/Lamb_Lane/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalLOSSST" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">LOSSST</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/jogodamemoria.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>isso mesmo</p>
+                                    <div class="stats" id="LOSSST">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/LOSSST/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalStickHero" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Stick Hero</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/jogodamemoria.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>Um jogo divertido e viciante em que você precisa estender varas para ajudar seu herói a atravessar plataformas sem cair.</p>
+                                    <div class="stats" id="StickHero">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/Stick_Hero_Game/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalTrilhonãoencontrado" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Trilho não encontrado</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/jogodamemoria.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>Um jogo de aventura inspirado em FEZ, onde você controla um trem em um mundo cheio de puzzles e perspectivas desafiadoras.</p>
+                                    <div class="stats" id="Trilhonãoencontrado">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/Track_Not_Found/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalTraffic_Run" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Traffic_Run</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/jogodamemoria.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>isso mesmo</p>
+                                    <div class="stats" id="Traffic_Run">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/Traffic_Run/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!-- Modal -->
+            <div class="modal fade" id="modalPong" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Pong</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="imgs/jogodamemoria.png" class="img-fluid" alt="Imagem 1">
+                                </div>
+                                <div class="col-md-8">
+                                    <p>isso mesmo</p>
+                                    <div class="stats" id="Pong">
+                                    <h3>Best Score:</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal" value="">Fechar</md-filled-tonal-button>
+                            <md-filled-button style="font-family: BestTen, sans-serif;" type="button" href="games/pong/index.html" target="blank" value="">Jogar</md-filled-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+    <footer>
+        <hr style="position: relative;top: -10px;margin: 0;height: 1px;background-image: linear-gradient(to right, #00000000, #d9ffff, #00000000);width: 100%;height: 6px;border: 0;">
+
+        <span><a class="links" href="#" target="blank" title="Documentação do projeto">Documentação</a></span>
+        <span><a class="links" href="https://github.com/talysonxx/projeto-expofadesa" target="blank" title="Acessa os arquivos do projeto">GitHub</a></span>
+        <span class="links">© 2024 - Expofadesa</span>
+    </footer>
+        
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+
+
+</body></html>
