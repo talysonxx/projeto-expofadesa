@@ -25,12 +25,14 @@
 </head>
 <body>
     <div class="container">
-
         <div class="row mt-2 text-center align-items-center">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
                 <img src="imgs/jabu.png" style="width: 110px" alt="logo">
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
+                <span><a id="apresentacao" style="font-size: 20px; text-decoration: none;" href="../index.html">Nosso site de apresentação</a></span>
+            </div>
+            <div class="col-12 col-md-4">
                 <span style="font-size: 45px">Arcade Fadesa</span>
             </div>
 

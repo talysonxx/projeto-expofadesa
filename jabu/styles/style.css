@@ -175,6 +175,14 @@ span .links:hover {
     color: rgb(211, 197, 197)
 }
 
+a #apresentacao {
+    color: white;
+}
+
+a #apresentacao:hover {
+    color: black;
+}
+
 #profile {
     width: 71px;
     height: 71;
