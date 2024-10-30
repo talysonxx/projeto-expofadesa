@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcade Fadesa</title>
-    <link rel="icon" type="image/png" href="imgs/jabu.png">
+    <link rel="icon" type="image/png" href="imgs/jabu-logo-1.png">
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/dark.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -28,7 +28,7 @@
 
         <div class="row mt-2 text-center align-items-center">
             <div class="col-12 col-md-6">
-                <img src="imgs/jabu-2.png" style="width: 110px" alt="logo">
+                <img src="imgs/jabu.png" style="width: 250px" alt="logo">
             </div>
             <div class="col-12 col-md-6">
                 <span style="font-size: 45px">Arcade Fadesa</span>
