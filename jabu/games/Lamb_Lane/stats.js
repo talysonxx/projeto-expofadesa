@@ -11,9 +11,9 @@ const idJogo = "jogo3"; // defina de antem o id do jogo aqui
 
 let data = {
     usuario: "usuario sem nome",
-    bestScore: localStorage.getItem(`${idJogo}-bestScore`) || 0, // caso tenha dados no localstorage, pega, caso n o, pega 0
+    bestScore: localStorage.getItem(`${idJogo}-bestScore`) || 0, // caso tenha dados no localstorage, pega, caso nao, pega 0
   };
-
+  
 async function verificar() {
     return await verifyUser();
 }
@@ -31,19 +31,25 @@ async function lerDB() { // pega os dados do bd
 let logged = await verificar();
 if (logged) {
     await lerDB(); // soobrescreve a data caso o usu rio tenha dados
+  } else {
+    document.getElementById("bestScore").innerText = 'Melhor: ' + data.bestScore;
   }
 
 function checkEndGame() {
+  var i = 0
     if (endDOM.style.visibility === "visible") {
-      var i = 0;
-        if (data.bestScore < parseInt(counterDOM.innerText) || data.bestScore == undefined || data.bestScore == null || isNaN(data.bestScore && i == 0)) {
-            i = 1
+        if (parseInt(data.bestScore) < parseInt(counterDOM.innerText) || data.bestScore == undefined || data.bestScore == null || isNaN(data.bestScore && i === 0)) {
+            i = 1;
             data.bestScore = parseInt(counterDOM.innerText);
-            console.log(data);
+            document.getElementById("bestScore").innerText = 'Melhor: ' + parseInt(counterDOM.innerText);
+            if (logged) {
+              Send(idJogo, data.bestScore); // envia os dados para o bd
+              
+            } else {
+              localStorage.setItem(`${idJogo}-bestScore`, data.bestScore)
+            }
             
-            Send(idJogo, data.bestScore); // envia os dados para o bd
         }
-        console.log('perdeu troxa');
     }
 
     requestAnimationFrame(checkEndGame);

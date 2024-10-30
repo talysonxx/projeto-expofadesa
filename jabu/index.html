@@ -4,6 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcade Fadesa</title>
+    <style>
+
+.button-30 {
+    backdrop-filter: blur(8px);
+    align-items: center;
+    appearance: none;
+    background: linear-gradient(153deg, #003937, #36052994);
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #141499 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 66px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+
+.button-30:focus {
+    box-shadow: #6f6fe9 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #14204f 0 -3px 0 inset;
+}
+
+.button-30:hover {
+    box-shadow: rgb(78 29 181 / 40%) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #19199b 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-30:active {
+    box-shadow: #04042c 0 3px 7px inset;
+    transform: translateY(2px);
+}
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <link rel="icon" type="image/png" href="imgs/jabu.png">
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +88,8 @@
 
             <div class="row text-center align-items-center mt-4 mt-md-3">
                 <div class="col-12 col-md-6">
-                    <button id="loginBtn" type="button" class="btn btn-light"><img id="profile" src="https://i.pinimg.com/280x280_RS/1f/67/b3/1f67b374f951dfc4551ad9b067d2adc7.jpg" style="margin-inline: 10px; width: 50px;"><p style="all: initial; font-family: BestTen">Login conta Google</p></button>
+
+                    <button id="loginBtn" class="button-30" role="button"><div style="padding: 5px;  color: #b8b8b8;"><img id="profile" src="https://i.pinimg.com/280x280_RS/1f/67/b3/1f67b374f951dfc4551ad9b067d2adc7.jpg" style="margin-inline: 10px; width: 50px;"><texto>Login conta Google</texto></div></button>
                 </div>
                 <div class="col-12 col-md-6 mt-md-0 mt-2">
                     <span class="bold-stroke fs-6">JOGOS DISPONÍVEIS</span>
@@ -65,3 +114,5 @@
     
 </body>
 </html>
+
+
