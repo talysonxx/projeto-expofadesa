@@ -42,9 +42,6 @@ async function main() {
       loginButton.lastChild.innerText = "LOGOUT";
       const photoURL = user.photoURL; // Adquire a foto de perfil
       icon.src = photoURL;
-      gameData = await LerDados(); // Aguarda a leitura dos dados
-      const game1stats = document.getElementById('SAO-TheGame')
-      game1stats.innerText = `Best Score: ${gameData.bestScore}`
     }
   }
 

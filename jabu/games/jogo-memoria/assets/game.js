@@ -97,36 +97,4 @@ let game = {
   }
 };
 
-// Variável para o timer
-let timer; 
-const TIME_LIMIT = 60; // Limite de tempo em segundos
-
-function startTimer() {
-  game.timeLeft = TIME_LIMIT; // Reinicia o tempo
-  document.getElementById('time-left').innerText = game.timeLeft;
-
-  timer = setInterval(() => {
-    game.timeLeft--;
-    document.getElementById('time-left').innerText = game.timeLeft;
-
-    if (game.timeLeft <= 0) {
-      clearInterval(timer);
-      let divGameOver = document.getElementById('game-over');
-      divGameOver.style.display = 'flex';
-    }
-  }, 1000);
-}
-
-function startGame() {
-  game.createCardsFromTechs();
-  initializeCards();
-  startTimer(); // Inicia o cronômetro ao começar o jogo
-}
-
-function restart() {
-  game.clearCards();
-  clearInterval(timer); // Para o cronômetro
-  let divGameOver = document.getElementById('game-over');
-  divGameOver.style.display = 'none';
-  startGame(); // Reinicia o jogo e o cronômetro
-}
+export default game;

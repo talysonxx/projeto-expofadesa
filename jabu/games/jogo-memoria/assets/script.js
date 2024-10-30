@@ -1,3 +1,29 @@
+import game from "./game.js";
+
+import {
+  LerDados,
+  Send,
+  verifyUser,
+  auth
+} from "../../../scripts/firebase.js";
+
+let idJogo = "jogo2"; // defina de antemão o id do jogo aqui
+ // define a data caso o usuário não possua dads=os ou caso o usuário não esteja logado	(sem conta)
+let data;
+data = {
+  usuario: "usuario sem nome",
+  bestScore: localStorage.getItem(`${idJogo}-bestScore`) || 0, // caso tenha dados no localstorage, pega, caso não, pega 0
+};
+
+async function lerDB() { // pega os dados do bd
+  try {
+    data = await LerDados(idJogo); // id do jogo da cobrinha: jogo1
+    return data; 
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 const FRONT = 'card-front'
 const BACK = 'card-back'
 const CARD = 'card'
@@ -5,10 +31,64 @@ const ICON = 'icon'
 
 startGame()
 
-function startGame() {
-  game.createCardsFromTechs()
+class Timer {
+  constructor() {
+    this.milliseconds = 0;
+    this.isRunning = false;
+    this.appendTime = document.getElementById("tens");
+    this.interval = null;
+  }
+  startTimer() {
+    if (this.isRunning) {
+      console.warn("Timer is already running.");
+      return;
+    }
+    this.isRunning = true;
+    this.interval = setInterval(() => {
+      this.milliseconds += 0.10;
+      this.updateDisplay();
+    }, 10);
+    console.log("Timer started.");
+  }
+  stopTimer() {
+    if (!this.isRunning) {
+      console.warn("Timer is not running.");
+      return;
+    }
+    clearInterval(this.interval);
+    this.interval = null;
+    this.isRunning = false;
+    this.updateDisplay();
+    console.log("Timer stopped. Total milliseconds:", this.milliseconds);
+  }
+  resetTimer() {
+    this.stopTimer();
+    this.milliseconds = 0;
+    this.updateDisplay();
+    console.log("Timer reset.");
+  }
+  updateDisplay() {
+    const seconds = Math.floor(this.milliseconds / 1000);
+    const tens = Math.floor((this.milliseconds % 1000) / 10);
+    this.appendTime.innerHTML = `${seconds < 10 ? "0" + seconds : seconds}:${tens < 10 ? "0" + tens : tens}`;
+  }
+}
 
+var timer = new Timer();
+
+const profile = document.getElementById("profile");
+const bestScoreElm = document.getElementById("bestScore");
+async function startGame() {
+  var logged = await verifyUser(); // verifica se o usuário esta logado
+  if (logged) {
+    await lerDB(); // soobrescreve a data caso o usuário tenha dados
+    profile.src = auth.currentUser.photoURL
+  }
+  bestScoreElm.innerHTML = `Melhor tempo: ${data.bestScore/1000} segundos`
+  game.createCardsFromTechs()
   initializeCards()
+  document.getElementById('game-board').addEventListener('click', () => {timer.startTimer()})
+  
 }
 function initializeCards() {
   let gameBoard = document.querySelector('#game-board')
@@ -50,7 +130,22 @@ function flipCard() {
         game.clearCards()
         if (game.checkGameOver()) {
           let divGameOver = document.getElementById('game-over')
-          divGameOver.style.display = 'flex'
+          divGameOver.style.display = 'flex';
+          document.getElementById('game-board').addEventListener('click', () => {timer.stopTimer()})
+          if (timer.milliseconds < data.bestScore || data.bestScore == undefined || data.bestScore == null || data.bestScore == "0") {
+            data.bestScore = timer.milliseconds
+            if (logged) {
+              try {
+                Send("jogo2", timer.milliseconds)
+              } catch (error) {
+                console.log(error)
+              }
+            } else {
+              localStorage.setItem("bestscore2", timer.milliseconds)
+            }
+          }
+          document.getElementById('bestScore').innerHTML = `Melhor tempo: ${data.bestScore/1000} segundos`
+          document.getElementById('restart').addEventListener('click', restart)
         }
       } else {
         setTimeout(() => {
@@ -71,8 +166,19 @@ function restart() {
   game.clearCards()
   let divGameOver = document.getElementById('game-over')
   divGameOver.style.display = 'none'
+  timer.stopTimer()
+  timer.resetTimer()
   startGame()
+} 
+
+
+function winGame() {
+  game.cards.forEach(card => {
+    let cardElement = document.getElementById(card.id)
+    cardElement.classList.add('flip')
+  })
+  timer.stopTimer()
+  let divGameOver = document.getElementById('game-over')
+  divGameOver.style.display = 'flex'
 }
-
-
 

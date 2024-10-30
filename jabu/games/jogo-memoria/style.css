@@ -10,6 +10,7 @@ html {
 }
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -51,7 +52,7 @@ body {
 }
 .card-front {
   background-color: #165808;
-  transform: rotateY(180deg);
+  transform: rotateY(20deg);
 }
 .card-back {
   color: #101c2c;
@@ -68,6 +69,14 @@ body {
 
 .icon {
   width: 65%;
+}
+
+#profile {
+  width: 50px;
+  height: 50px;
+  clip-path: circle(50%);
+  background: rgb(198, 198, 198);
+  margin-block: 1px;
 }
 
 #game-over {
@@ -122,4 +131,10 @@ max-height: 550px;
   background-color: #66e412;
   border: none;
   border-radius: 10px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
