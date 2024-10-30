@@ -10,22 +10,13 @@ const jogos = {
   "jogo1": {
       "nome": "Jogo da Cobrinha",
       "id": "JogodaCobrinha",
-      "img": "imgs/jogo-cobrinha.png",
+      "img": "imgs/jogo-cobrinha2.png",
       "descricao": "O jogo da cobrinha é um clássico simples e viciante. O jogador controla uma cobra que se move pela tela, com o objetivo de comer pequenos blocos que aparecem aleatoriamente. Cada vez que a cobra come um bloco, ela cresce, tornando-se mais difícil de manobrar. O jogo termina se a cobra bater em si mesma.",
       "link": "games/jogo-cobrinha/index.html",
       "hasLeaderboard": {
           "ascending": false, "pointsScore": true 
       },
-      "descricaoCurta": "No jogo da cobrinha, você controla uma cobra que cresce toda vez que come, e o desafio é não bater nas paredes ou em si mesma."
-  },
-  "jogo2": {
-      "nome":"Tower Defense",
-      "id": "TowerDefense",
-      "img": "imgs/tower-defense.png",
-      "descricao": "Em Tower Defense, sua missão é proteger o reino contra hordas de monstros implacáveis. Construa torres estrategicamente ao longo do caminho e melhore suas defesas para impedir que os inimigos avancem. Cada onda de monstros traz novos desafios, e você precisará de inteligência e rapidez para sobreviver. Não permita que eles cheguem ao outro lado e destrua tudo o que encontrar pela frente!",
-      "link": "games/tower-defense/index.html",
-      "hasLeaderboard": false,
-      "descricaoCurta": "Não permita que os monstros passem para o outro lado" 
+      "descricaoCurta": "Controle uma cobra gulosa que morre ao bater nas paredes ou em si mesma."
   },
   "jogo3": {
       "nome":"PacMan",
@@ -127,7 +118,16 @@ const jogos = {
       "link": "games/pong/index.html",
       "hasLeaderboard": false,
       "descricaoCurta": "Reviva o clássico Pong com uma jogabilidade retro e simples, mas sempre desafiadora!"
-}
+  },
+  "jogo2": {
+    "nome": "Tower Defense",
+    "id": "TowerDefense",
+    "img": "imgs/tower-defense.png",
+    "descricao": "Em Tower Defense, sua missão é proteger o reino contra hordas de monstros implacáveis. Construa torres estrategicamente ao longo do caminho e melhore suas defesas para impedir que os inimigos avancem. Cada onda de monstros traz novos desafios, e você precisará de inteligência e rapidez para sobreviver. Não permita que eles cheguem ao outro lado e destrua tudo o que encontrar pela frente!",
+    "link": "games/tower-defense/index.html",
+    "hasLeaderboard": false,
+    "descricaoCurta": "Não permita que os monstros passem para o outro lado"
+  },
 };
 
 // import {bestScore, playerName} from "../games/jogo-cobrinha/scripts/main.js";
