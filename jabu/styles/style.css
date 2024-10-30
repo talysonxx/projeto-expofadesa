@@ -17,7 +17,10 @@ body {
     /* Desativa a suavização de fontes no Firefox no macOS */
     padding-right: 0px !important;
 }
-
+svg {
+    width: 24px;
+    fill: rgb(203 190 255);
+}
 .bold-stroke {
     /* pego de https://stackoverflow.com/questions/2570972/css-font-border   ... */
     text-shadow:
@@ -78,7 +81,7 @@ body {
     transition: transform ease 200ms;
 }
 .card:hover {
-    transform: perspective(1px) scale(1.08) translateY(1.01px);
+    transform: perspective(1px) scale(1.03) translateY(1.01px);
     transition: transform ease 200ms;
 }
 
@@ -95,6 +98,16 @@ body {
 .card img {
 
     border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+.row {
+    flex-direction: column;
+    align-content: center;
+}
+.col-6 {
+    min-width: 400px;
+}
 }
 
 .col-6 {

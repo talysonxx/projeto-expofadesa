@@ -212,9 +212,9 @@ async function main() {
     if (user) {
 
       
-      loginButton.lastChild.innerText = "LOGOUT";
       const photoURL = user.photoURL; // Adquire a foto de perfil
       icon.src = photoURL;
+      loginButton.lastChild.lastChild.textContent = "logout";
     }
   }
 
