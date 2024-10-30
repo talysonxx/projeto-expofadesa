@@ -1,18 +1,12 @@
 import {
   auth,
-  db,
   login,
   signOut,
-  setDoc,
-  doc,
-  getDoc,
   onAuthStateChanged,
-  userUid,
-  LerDados,
   getLeaderboard,
 } from "./firebase.js";
 
-import jogos from './games.json' assert { type: 'json' };
+import jogos from './games.json' with { type: 'json' };
 
 // import {bestScore, playerName} from "../games/jogo-cobrinha/scripts/main.js";
 
@@ -142,7 +136,6 @@ main();
 
 
 createCards();
-createModals();
 
 
 
@@ -153,14 +146,31 @@ export {auth}
 
 
 function createCards() {
-  const modalContainer = document.body;
+  const modalContainer = document.getElementById("linhaCards");
   if (!modalContainer) {
     return;
   }
 
   for (var i in jogos) {
     var jogo = jogos[i];
-        const modalElm = `
+    const cardElm = `
+      <div class="col-6 col-lg-4">
+        <div class="card">
+          <img src="${jogo.img}" class="card-img-top" alt="${jogo.nome}">
+          <div class="card-body">
+            <h5 class="card-title text-center">${jogo.nome}</h5>
+            <p class="card-text">${jogo.descricaoCurta}</p>
+            <md-outlined-button style="font-family: BestTen, sans-serif;" type="button" data-bs-toggle="modal"
+              data-bs-target="#modal${jogo.id}">
+              Sobre o jogo
+              <svg slot="icon" viewBox="0 0 48 48">
+                <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h13.95v3H9v30h30V25.05h3V39q0 1.2-.9 2.1-.9.9-2.1.9Zm10.1-10.95L17 28.9 36.9 9H25.95V6H42v16.05h-3v-10.9Z" />
+              </svg>
+            </md-outlined-button>
+          </div>
+        </div>
+      </div>
+      
       <div class="modal fade" id="modal${jogo.id}" tabindex="-1"
       aria-labelledby="modal1Label" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -192,58 +202,13 @@ function createCards() {
               </div>
           </div>
       </div>
-  </div>`;
-    modalContainer.insertAdjacentHTML('beforeend', modalElm);
+  </div>
+    `;
+    
+    modalContainer.insertAdjacentHTML('beforeend', cardElm);
+    
     if (jogo.hasLeaderboard) {
-      setLeaderboard(jogo.id, `${jogo.id}-leaderboard`, jogo.hasLeaderboard); // jogo cobrinha
+      setLeaderboard(jogo.id, `${jogo.id}-leaderboard`, jogo.hasLeaderboard);
     }
   }
 }
-
-async function createModals() {
-  const modalContainer = document.body;
-  if (!modalContainer) {
-    return;
-  }
-
-  for (var i in jogos) {
-    var jogo = jogos[i];
-        const modalElm = `
-      <div class="modal fade" id="modal${jogo.id}" tabindex="-1"
-      aria-labelledby="modal1Label" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="modal1Label">${jogo.nome}</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                  <div class="row">
-                      <div class="col-md-4">
-                          <img src="${jogo.img}" class="img-fluid" alt="Imagem 1">
-                      </div>
-                      <div class="col-md-8">
-                          <p>${jogo.descricao}</p>
-                          <div class="stats" id="${jogo.id}">
-                          <div id="${jogo.id}-leaderboard">
-                         
-                         <!-- aqui vai o placar -->
-                          
-                          </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="modal-footer">
-                  <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal">Fechar</md-filled-tonal-button>
-                  <md-filled-button style="font-family: BestTen, sans-serif;" type="button" onclick="window.open('${jogo.link}')">Jogar</md-filled-button>
-              </div>
-          </div>
-      </div>
-  </div>`;
-    modalContainer.insertAdjacentHTML('beforeend', modalElm);
-    if (jogo.hasLeaderboard) {
-      setLeaderboard(jogo.id, `${jogo.id}-leaderboard`, jogo.hasLeaderboard); // jogo cobrinha
-    }
-  }
-    };
