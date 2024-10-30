@@ -10,6 +10,8 @@ import {
 let idJogo = "jogo2"; // defina de antemão o id do jogo aqui
  // define a data caso o usuário não possua dads=os ou caso o usuário não esteja logado	(sem conta)
 let data;
+let wingame = false
+let logged = false;
 data = {
   usuario: "usuario sem nome",
   bestScore: localStorage.getItem(`${idJogo}-bestScore`) || 0, // caso tenha dados no localstorage, pega, caso não, pega 0
@@ -23,6 +25,7 @@ async function lerDB() { // pega os dados do bd
     console.log(error);
   }
 }
+
 
 const FRONT = 'card-front'
 const BACK = 'card-back'
@@ -45,7 +48,7 @@ class Timer {
     }
     this.isRunning = true;
     this.interval = setInterval(() => {
-      this.milliseconds += 0.10;
+      this.milliseconds += 10;
       this.updateDisplay();
     }, 10);
     console.log("Timer started.");
@@ -75,11 +78,10 @@ class Timer {
 }
 
 var timer = new Timer();
-
 const profile = document.getElementById("profile");
 const bestScoreElm = document.getElementById("bestScore");
 async function startGame() {
-  var logged = await verifyUser(); // verifica se o usuário esta logado
+  logged = await verifyUser(); // verifica se o usuário esta logado
   if (logged) {
     await lerDB(); // soobrescreve a data caso o usuário tenha dados
     profile.src = auth.currentUser.photoURL
@@ -90,6 +92,9 @@ async function startGame() {
   document.getElementById('game-board').addEventListener('click', () => {timer.startTimer()})
   
 }
+document.getElementById('restart').addEventListener('click', () => {restart()})
+
+
 function initializeCards() {
   let gameBoard = document.querySelector('#game-board')
   gameBoard.innerHTML = ''
@@ -128,24 +133,10 @@ function flipCard() {
     if (game.secondCard) {
       if (game.checkMath()) {
         game.clearCards()
-        if (game.checkGameOver()) {
-          let divGameOver = document.getElementById('game-over')
-          divGameOver.style.display = 'flex';
-          document.getElementById('game-board').addEventListener('click', () => {timer.stopTimer()})
-          if (timer.milliseconds < data.bestScore || data.bestScore == undefined || data.bestScore == null || data.bestScore == "0") {
-            data.bestScore = timer.milliseconds
-            if (logged) {
-              try {
-                Send("jogo2", timer.milliseconds)
-              } catch (error) {
-                console.log(error)
-              }
-            } else {
-              localStorage.setItem("bestscore2", timer.milliseconds)
-            }
-          }
-          document.getElementById('bestScore').innerHTML = `Melhor tempo: ${data.bestScore/1000} segundos`
-          document.getElementById('restart').addEventListener('click', restart)
+        if (game.checkGameOver() || wingame) {
+          
+          endGame();
+          
         }
       } else {
         setTimeout(() => {
@@ -162,6 +153,25 @@ function flipCard() {
   }
 }
 
+function endGame() {
+  let divGameOver = document.getElementById('game-over');
+  divGameOver.style.display = 'flex';
+  document.getElementById('game-board').addEventListener('click', () => { timer.stopTimer(); });
+  if (timer.milliseconds < data.bestScore || data.bestScore == undefined || data.bestScore == null || data.bestScore == "0") {
+    data.bestScore = timer.milliseconds;
+    if (logged) {
+      try {
+        Send("jogo2", timer.milliseconds);
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      localStorage.setItem(`${idJogo}-bestScore`, timer.milliseconds);
+    }
+  }
+  document.getElementById('bestScore').innerHTML = `Melhor tempo: ${data.bestScore / 1000} segundos`;
+}
+
 function restart() {
   game.clearCards()
   let divGameOver = document.getElementById('game-over')
@@ -173,12 +183,12 @@ function restart() {
 
 
 function winGame() {
-  game.cards.forEach(card => {
-    let cardElement = document.getElementById(card.id)
-    cardElement.classList.add('flip')
-  })
-  timer.stopTimer()
-  let divGameOver = document.getElementById('game-over')
-  divGameOver.style.display = 'flex'
+  endGame();
 }
 
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'w' && e.altKey) {
+    winGame()
+  }
+})

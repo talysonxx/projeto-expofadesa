@@ -134,6 +134,7 @@ function setLeaderboard(id, elementId, options = {}) {
 
 setLeaderboard("jogo1", "jogo1-leaderboard", { ascending: false, pointsScore: true });
 setLeaderboard("jogo2", "jogo2-leaderboard", { timeScore: true, ascending: true });
+setLeaderboard("jogo3", "jogo3-leaderboard", { ascending: false, pointsScore: true });
 }
 
 main();

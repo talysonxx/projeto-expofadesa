@@ -52,7 +52,7 @@ body {
 }
 .card-front {
   background-color: #165808;
-  transform: rotateY(20deg);
+  transform: rotateY(180deg);
 }
 .card-back {
   color: #101c2c;

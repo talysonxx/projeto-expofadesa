@@ -21,6 +21,12 @@ button {
   right: 20px;
 }
 
+#bestScore {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+
 #end {
   position: absolute;
   min-width: 100%;

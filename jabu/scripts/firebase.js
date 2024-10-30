@@ -77,7 +77,7 @@ async function Send(idjogo, value) {
         await setDoc(docRef, {
           timestamp: Date.now(),
           usuario: auth.currentUser.displayName,
-          bestScore: parseInt(value),
+          bestScore: isNaN(value) ? parseInt(value) : value,
           avatarUrl: auth.currentUser.photoURL,
           userUid: userUid,
         });
