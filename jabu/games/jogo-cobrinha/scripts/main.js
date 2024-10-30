@@ -5,7 +5,7 @@ import {
   verifyUser
 } from "../../../scripts/firebase.js";
 
-let idJogo = "jogo1"; // defina de antemão o id do jogo aqui
+let idJogo = "JogodaCobrinha"; // defina de antemão o id do jogo aqui
  // define a data caso o usuário não possua dads=os ou caso o usuário não esteja logado	(sem conta)
 let data;
 data = {
@@ -17,7 +17,7 @@ data = {
 
 async function lerDB() { // pega os dados do bd
   try {
-    data = await LerDados(idJogo); // id do jogo da cobrinha: jogo1
+    data = await LerDados(idJogo); // id do jogo da cobrinha: JogodaCobrinha
     return data; 
   } catch (error) {
     console.log(error);
@@ -92,7 +92,7 @@ async function main() {
       if (logged) {
         await Send(idJogo, bestScore); // se logado, salva no bd
       } else {
-        localStorage.setItem('jogo1-bestScore', bestScore); // se não logado, salva no localstorage
+        localStorage.setItem(`${idJogo}-bestScore`, bestScore); // se não logado, salva no localstorage
       }
     }
     alert("GAME OVER, pontuação final: " + currentScore);
