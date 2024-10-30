@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 1px;
+  color: #bebebe;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #000;
+  width: 100%;
+  min-height: 100vh;
+  vertical-align: middle;
+}
+
+.header {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+#logo {
+  width: 150px;
+}
+/* ids e classes */
+#wpp {
+  color: #06d755;
+  font-size: 60px;
+  position: fixed;
+  left: 35px;
+  bottom: 30px;
+}
+
+/* ----------------------- Menu ------------------------*/
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.5rem;
+  margin-bottom: 5px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: white;
+}
+
+/* -----------------------StarsFoto------------------------*/
+#starsImg {
+}
+
+/* -----------------------Sobre------------------------*/
+
+#sobre {
+  background-color: #fff;
+  min-height: 500px;
+  width: 100%;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding-top: 50px;
+  align-items: flex-start;
+}
+
+
+#sobre h2 span {
+  color: black;
+}
+
+#sobre p span {
+  color: #000;
+  font-weight: 700;
+}
+
+#integrantes-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Garante que palavras longas sejam quebradas */
+  overflow-wrap: break-word; /* Força a quebra da linha quando necessário */
+}
+
+
+/* -----------------------Dados------------------------*/
+#dados {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: start;
+  font-size: 16px;
+  line-height: 45px;
+  letter-spacing: 1px;
+  margin-left: -170px;
+}
+
+/* -----------------------Portfólio------------------------*/
+#portfolio {
+  background-color: #000;
+  width: 100%;
+  min-height: 700px;
+  font-size: 16px;
+  color: #333333;
+}
+
+#portfolio h1 {
+  color: white;
+  padding-top: 20px;
+  font-size: 40px;
+}
+
+.portimg {
+  border-radius: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  width: 1400px;
+  height: 800px;
+}
+
+.portfoliotext {
+  color: white;
+}
+
+/* -----------------------Tecnologias------------------------*/
+#tecnologias {
+  background-color: white;
+  width: 100%;
+  min-height: 700px;
+  font-size: 16px;
+  color: #000;
+}
+
+#tecnologias h1 {
+  color: #000;
+  padding-top: 20px;
+  font-size: 40px;
+}
+
+#tecnologias h1::after {
+  background-color: currentColor;
+  width: 40px;
+  height: 1px;
+  display: block;
+  margin: 3px 44%;
+}
+
+.tecs {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.tecs i {
+  font-size: 90px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.tecs p {
+  color: #000;
+  font-weight: bold;
+}
+
+.contagem {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333333;
+  margin: 10px auto;
+}
+
+.caixa-prog {
+  width: 350px;
+  height: 6px;
+  border-radius: 13px;
+  background-color: #bbb;
+  margin: 1px auto;
+  padding: 2px;
+}
+
+.html {
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #634b4b;
+  animation: progresso 3s;
+}
+
+.reactjs {
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #634b4b;
+  animation: progresso 3s;
+}
+
+.css {
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #634b4b;
+  animation: progresso 3s;
+}
+
+.javascript {
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #634b4b;
+  animation: progresso 3s;
+}
+
+.linux {
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #634b4b;
+  animation: progresso 3s;
+}
+
+.responsivo {
+  width: 70px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #333333;
+  animation: git 3s;
+}
+
+.git {
+  width: 70px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #333333;
+  animation: git 3s;
+}
+
+.bootstrap {
+  width: 35px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #333333;
+  animation: boots 3s;
+}
+
+.vermelho {
+  color: #cc362a;
+}
+
+.azul {
+  color: #34a3d5;
+}
+
+.preto {
+  color: black;
+}
+
+.amarelo {
+  color: #f8db00;
+}
+
+.branco {
+  color: white;
+}
+
+.cinza {
+  color: #333333;
+}
+
+.coral {
+  color: #e94e32;
+}
+
+.roxo {
+  color: #6b45a8;
+}
+
+/* -----------------------KeyFrames------------------------*/
+
+@keyframes progresso {
+  from {
+    width: 1px;
+  }
+  to {
+    width: 105px;
+  }
+}
+
+@keyframes git {
+  from {
+    width: 1px;
+  }
+  to {
+    width: 70px;
+  }
+}
+
+@keyframes resp {
+  from {
+    width: 1px;
+  }
+  to {
+    width: 140px;
+  }
+}
+
+@keyframes boots {
+  from {
+    width: 1px;
+  }
+  to {
+    width: 35px;
+  }
+}
+
+/* -----------------------Footer------------------------*/
+#redes-sociais2 {
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 25px;
+  font-size: 20px;
+}
+
+#redes-sociais2 a {
+  color: white;
+}
+
+footer {
+  color: white;
+  background-color: #000;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -----------------------Animaçoes------------------------*/
+[data-anime] {
+  opacity: 0;
+  transition: 1s;
+}
+
+[data-anime="left"] {
+  transform: translate3d(-100px, 0, 0);
+}
+
+[data-anime="right"] {
+  transform: translate3d(100px, 0, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0, 0);
+}
