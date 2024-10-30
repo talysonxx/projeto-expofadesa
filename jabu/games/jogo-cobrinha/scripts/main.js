@@ -1,15 +1,7 @@
+
 import {
-  auth,
-  db,
-  login,
-  signOut,
-  setDoc,
-  doc,
-  getDoc,
-  userUid,
   LerDados,
   Send,
-  onAuthStateChanged,
   verifyUser
 } from "../../../scripts/firebase.js";
 
@@ -18,7 +10,7 @@ let idJogo = "jogo1"; // defina de antemão o id do jogo aqui
 let data;
 data = {
   usuario: "usuario sem nome",
-  bestScore: localStorage.getItem("jogo1-bestScore") || 0, // caso tenha dados no localstorage, pega, caso não, pega 0
+  bestScore: localStorage.getItem(`${idJogo}-bestScore`) || 0, // caso tenha dados no localstorage, pega, caso não, pega 0
 };
 
 

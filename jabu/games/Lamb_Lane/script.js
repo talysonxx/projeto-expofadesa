@@ -1,3 +1,5 @@
+
+
 const counterDOM = document.getElementById("counter");
 const endDOM = document.getElementById("end");
 
@@ -711,6 +713,7 @@ function animate(timestamp) {
       const carMaxX = vechicle.position.x + (vechicleLength * zoom) / 2;
       if (chickenMaxX > carMinX && chickenMinX < carMaxX) {
         endDOM.style.visibility = "visible";
+        window.gameEnded = true;
       }
     });
   }

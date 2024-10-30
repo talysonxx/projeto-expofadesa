@@ -42,9 +42,6 @@ async function main() {
       loginButton.lastChild.innerText = "LOGOUT";
       const photoURL = user.photoURL; // Adquire a foto de perfil
       icon.src = photoURL;
-      gameData = await LerDados(); // Aguarda a leitura dos dados
-      const game1stats = document.getElementById('SAO-TheGame')
-      game1stats.innerText = `Best Score: ${gameData.bestScore}`
     }
   }
 
@@ -137,6 +134,7 @@ function setLeaderboard(id, elementId, options = {}) {
 
 setLeaderboard("jogo1", "jogo1-leaderboard", { ascending: false, pointsScore: true });
 setLeaderboard("jogo2", "jogo2-leaderboard", { timeScore: true, ascending: true });
+setLeaderboard("jogo3", "jogo3-leaderboard", { ascending: false, pointsScore: true });
 }
 
 main();
