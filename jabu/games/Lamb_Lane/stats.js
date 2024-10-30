@@ -35,7 +35,9 @@ if (logged) {
 
 function checkEndGame() {
     if (endDOM.style.visibility === "visible") {
-        if (data.bestScore < parseInt(counterDOM.innerText) || data.bestScore == undefined || data.bestScore == null || isNaN(data.bestScore)) {
+      var i = 0;
+        if (data.bestScore < parseInt(counterDOM.innerText) || data.bestScore == undefined || data.bestScore == null || isNaN(data.bestScore && i == 0)) {
+            i = 1
             data.bestScore = parseInt(counterDOM.innerText);
             console.log(data);
             

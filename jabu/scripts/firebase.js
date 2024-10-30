@@ -158,7 +158,24 @@ async function LerDados(idjogo) {
     });
   }
 
+  async function renameGameId(oldId, newId) {
+  const q = query(collectionGroup(db, "Game_Stats"), where("bestScore", ">", 0));
+    const querySnapshot = await getDocs(q);
+      querySnapshot.forEach(async (docc) => {
+        if (docc.id === oldId) {
+      const docRef = docc.ref;
+        const newDocRef = doc(db, `users/${docRef.parent.parent.id}/Game_Stats`, newId);
+      const data = docc.data();
+      await setDoc(newDocRef, data);
+          await deleteDoc(docRef);
+    }
+  });
+  }
 
+
+
+  
+  renameGameId("jogo2", "JogodaMemoria")
 
 
 // Exporta as funções e métodos para serem utilizados em outros módulos
