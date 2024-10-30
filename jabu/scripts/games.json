@@ -1,0 +1,14 @@
+{
+    "jogo1": {
+        "nome": "Jogo da Cobrinha",
+        "id": "JogodaCobrinha",
+        "img": "imgs/jogo-cobrinha.png",
+        "descricao": "O jogo da cobrinha é um clássico simples e viciante. O jogador controla uma cobra que se move pela tela, com o objetivo de comer pequenos blocos que aparecem aleatoriamente. Cada vez que a cobra come um bloco, ela cresce, tornando-se mais difícil de manobrar. O jogo termina se a cobra bater em si mesma.",
+        "link": "games/jogo-cobrinha/index.html"
+    },
+    "jogo2": {
+        "id": "JogodaCobrinha",
+        "img": "imgs/jogo-cobrinha.png",
+        "descricao": "nada"
+    }
+}

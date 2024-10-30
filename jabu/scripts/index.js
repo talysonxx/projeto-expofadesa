@@ -12,6 +12,7 @@ import {
   getLeaderboard
 } from "./firebase.js";
 
+import jogos from './games.json' assert { type: 'json' };
 
 // import {bestScore, playerName} from "../games/jogo-cobrinha/scripts/main.js";
 
@@ -132,12 +133,65 @@ function setLeaderboard(id, elementId, options = {}) {
   });
 }
 
-setLeaderboard("jogo1", "jogo1-leaderboard", { ascending: false, pointsScore: true });
-setLeaderboard("jogo2", "jogo2-leaderboard", { timeScore: true, ascending: true });
-setLeaderboard("jogo3", "jogo3-leaderboard", { ascending: false, pointsScore: true });
+setLeaderboard("jogo1", "JogodaCobrinha-leaderboard", { ascending: false, pointsScore: true }); // jogo cobrinha
+setLeaderboard("jogo2", "jogo2-leaderboard", { timeScore: true, ascending: true }); // jogo da mamória
+setLeaderboard("jogo3", "jogo3-leaderboard", { ascending: false, pointsScore: true }); // jogo da galinha que atravessa a rua
 }
 
 main();
 
+createModals();
+
+
+
+
 
 export {auth}
+
+
+
+
+async function createModals() {
+  const modalContainer = document.body;
+  if (!modalContainer) {
+    return;
+  }
+
+  for (var i in jogos) {
+    var jogo = jogos[i];
+        const modalElm = `
+      <div class="modal fade" id="modal${jogo.id}" tabindex="-1"
+      aria-labelledby="modal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="modal1Label">${jogo.nome}</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <img src="${jogo.img}" class="img-fluid" alt="Imagem 1">
+                      </div>
+                      <div class="col-md-8">
+                          <p>${jogo.descricao}</p>
+                          <div class="stats" id="${jogo.id}">
+                          <div id="${jogo.id}-leaderboard">
+                         
+                         <!-- aqui vai o placar -->
+                          
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <md-filled-tonal-button style="font-family: BestTen, sans-serif;" type="button" data-bs-dismiss="modal">Fechar</md-filled-tonal-button>
+                  <md-filled-button style="font-family: BestTen, sans-serif;" type="button" onclick="window.open('${jogo.link}')">Jogar</md-filled-button>
+              </div>
+          </div>
+      </div>
+  </div>`;
+    modalContainer.insertAdjacentHTML('beforeend', modalElm);
+  }
+    };
